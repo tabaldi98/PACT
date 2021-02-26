@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj",
+        "projectName": "app.Tabaldi.PACT.Application",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj",
+        "projectName": "app.Tabaldi.PACT.Crosscutting.NetCore",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj",
+        "projectName": "app.Tabaldi.PACT.Domain.Seedwork",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj",
+        "projectName": "app.Tabaldi.PACT.Domain",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj",
+        "projectName": "app.Tabaldi.PACT.Infra.Data",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\Fisio - Atendimentos\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

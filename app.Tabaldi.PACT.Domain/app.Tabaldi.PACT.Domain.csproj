@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{637AA12B-46B1-4794-922E-C4A17D1F5A33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>app.Tabaldi.PACT.Domain</RootNamespace>
+    <AssemblyName>app.Tabaldi.PACT.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttendanceModule\AttendanceAgg\Attendance.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\AttendanceSpecifications.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceAddCommand.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceEditCommand.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceRemoveCommand.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\IAttendanceRepository.cs" />
+    <Compile Include="AttendanceModule\AttendanceAgg\Models\AttendanceModel.cs" />
+    <Compile Include="ClientsModule\ClientAgg\Client.cs" />
+    <Compile Include="ClientsModule\ClientAgg\ClientSpecifications.cs" />
+    <Compile Include="ClientsModule\ClientAgg\Commands\ClientEditCommand.cs" />
+    <Compile Include="ClientsModule\ClientAgg\Commands\ClientAddCommand.cs" />
+    <Compile Include="ClientsModule\ClientAgg\Commands\ClientRemoveCommand.cs" />
+    <Compile Include="ClientsModule\ClientAgg\IClientRepository.cs" />
+    <Compile Include="ClientsModule\ClientAgg\Models\ClientModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj">
+      <Project>{c7555ca5-d8d1-4bf1-9aef-52296fe1fbc4}</Project>
+      <Name>app.Tabaldi.PACT.Domain.Seedwork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

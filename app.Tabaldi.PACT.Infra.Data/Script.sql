@@ -1,0 +1,40 @@
+﻿IF DB_ID('FisioPACTApp') IS NULL
+BEGIN
+	CREATE DATABASE [FisioPACTApp]
+END
+GO
+
+USE [FisioPACTApp]
+
+IF OBJECT_ID('Clients', 'U') IS NULL
+BEGIN
+	CREATE TABLE Clients
+	(
+		[ID] INT IDENTITY(1,1) NOT NULL,
+		[Name] VARCHAR(255) NOT NULL,
+		[Phone] VARCHAR(255) NOT NULL,
+		[Diagnosis] VARCHAR(5000) NULL,
+		[DateOfBirth] DATETIME NULL,
+		[RegistrationDate] DATETIME NULL,
+		[Objective] VARCHAR(5000) NULL,
+		CONSTRAINT PK_Clients PRIMARY KEY (ID)
+	)
+END
+GO
+
+IF OBJECT_ID('Attendances', 'U') IS NULL
+BEGIN
+	CREATE TABLE Attendances
+	(
+		[ID] INT IDENTITY(1,1) NOT NULL,
+		[ClientID] INT NOT NULL,
+		[Date] DATETIME NOT NULL,
+		[HourInitial] DATETIME NOT NULL,
+		[HourFinish] DATETIME NOT NULL,
+		[Description] VARCHAR(5000) NULL,
+		CONSTRAINT PK_Attendance PRIMARY KEY (ID)
+	)
+
+	ALTER TABLE Attendances ADD FOREIGN KEY ([ClientID]) REFERENCES Clients(ID);
+END
+GO

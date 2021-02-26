@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\app.Tabaldi.PACT.Application\app.Tabaldi.PACT.Application.csproj" />
+    <ProjectReference Include="..\app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj" />
+    <ProjectReference Include="..\app.Tabaldi.PACT.Domain\app.Tabaldi.PACT.Domain.csproj" />
+    <ProjectReference Include="..\app.Tabaldi.PACT.Infra.Data\app.Tabaldi.PACT.Infra.Data.csproj" />
+  </ItemGroup>
+
+
+</Project>

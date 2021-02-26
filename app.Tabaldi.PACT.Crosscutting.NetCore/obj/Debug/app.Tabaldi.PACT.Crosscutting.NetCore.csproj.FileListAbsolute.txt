@@ -1,0 +1,5 @@
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Crosscutting.NetCore\bin\Debug\app.Tabaldi.PACT.Crosscutting.NetCore.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Crosscutting.NetCore\bin\Debug\app.Tabaldi.PACT.Crosscutting.NetCore.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Crosscutting.NetCore\obj\Debug\app.Tabaldi.PACT.Crosscutting.NetCore.csprojAssemblyReference.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Crosscutting.NetCore\obj\Debug\app.Tabaldi.PACT.Crosscutting.NetCore.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Crosscutting.NetCore\obj\Debug\app.Tabaldi.PACT.Crosscutting.NetCore.pdb
