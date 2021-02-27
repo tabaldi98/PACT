@@ -5,10 +5,11 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
 {
     public interface IClientRepository :
         ICreateRepository<Client>,
-        IRetrieveMapper<Client>,
+        IRetrieveRepository<Client>,
         ISingleRepository<Client>,
         IAnyRepository<Client>,
-        IUpdateRepository<Client>
+        IUpdateRepository<Client>,
+        IRetrieveMapper<Client>
     {
         Task DeleteAsync(int[] ids);
     }

@@ -1,10 +1,11 @@
-﻿using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Application.AttendanceAgg
 {
@@ -14,15 +15,23 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
         IQueryable<AttendanceModel> RetrieveAllByClientID(int clientId);
         Task<bool> RemoveAsync(AttendanceRemoveCommand command);
         Task<bool> UpdateAsync(AttendanceEditCommand command);
+
+        IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances();
+        IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances();
     }
 
     public class AttendanceAppService : AppServiceBase<IAttendanceRepository>, IAttendanceAppService
     {
+        private readonly IClientRepository _clientRepository;
+
         public AttendanceAppService(
+            IClientRepository clientRepository,
             IAttendanceRepository repository,
             IUnitOfWork unitOfWork)
             : base(repository, unitOfWork)
-        { }
+        {
+            _clientRepository = clientRepository;
+        }
 
         public async Task<int> CreateAsync(AttendanceAddCommand command)
         {
@@ -56,6 +65,16 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
             attendance.SetDescription(command.Description);
 
             return await CommitAsync();
+        }
+
+        public IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances()
+        {
+            return _clientRepository.RetrieveMapper(new AttendancesCurrentDayModelMapper());
+        }
+
+        IQueryable<AttendancesCurrentWeekModel> IAttendanceAppService.GetCurrentWeekAttendances()
+        {
+            return _clientRepository.RetrieveMapper(new AttendancesCurrentWeekModelMapper());
         }
     }
 }

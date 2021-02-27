@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 using app.Tabaldi.PACT.App.Commom;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
 using app.Tabaldi.PACT.App.Features.AttendanceAgg;
+using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
+using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
+using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 
 namespace app.Tabaldi.PACT.App.Features.ClientsAgg
 {
@@ -42,6 +38,23 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             dgClients.DataSource = list;
 
             dgClients.Columns[nameof(ClientModel.ID)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.ChargingType)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.Value)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.DaysOffAttendance)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartMonday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndMonday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartTuesday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndTuesday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartWednesday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndWednesday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartThursday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndThursday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartFriday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndFriday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartSaturday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndSaturday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.StartSunday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.EndSunday)].Visible = false;
             dgClients.Columns[nameof(ClientModel.RegistrationDate)].Visible = false;
 
             dgClients.Columns[nameof(ClientModel.Name)].HeaderText = "Nome";

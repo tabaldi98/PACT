@@ -55,7 +55,7 @@
             this.dgClients.Location = new System.Drawing.Point(3, 36);
             this.dgClients.Name = "dgClients";
             this.dgClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgClients.Size = new System.Drawing.Size(754, 487);
+            this.dgClients.Size = new System.Drawing.Size(754, 483);
             this.dgClients.TabIndex = 0;
             this.dgClients.SelectionChanged += new System.EventHandler(this.dgClients_SelectionChanged);
             this.dgClients.DoubleClick += new System.EventHandler(this.dgClients_DoubleClick);

@@ -4,6 +4,7 @@ using app.Tabaldi.PACT.Domain.Seedwork.Specification;
 using app.Tabaldi.PACT.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace app.Tabaldi.PACT.Infra.Data.Repositories.ClientsAgg
             var list = await GenericRepository.Context.Set<Client>().Where(p => ids.Contains(p.ID)).ToListAsync();
 
             GenericRepository.Context.Set<Client>().RemoveRange(list.ToArray());
+        }
+
+        public Task<List<Client>> RetrieveAsync(ISpecification<Client> specification = null, bool autoDetectChangesEnabled = false, params Expression<Func<Client, object>>[] includeExpressions)
+        {
+            return GenericRepository.RetrieveAsync(specification, autoDetectChangesEnabled, includeExpressions);
         }
 
         public IQueryable<TResult> RetrieveMapper<TResult>(IHaveMapper<Client, TResult> mapper)

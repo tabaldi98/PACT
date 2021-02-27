@@ -20,3 +20,18 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendime
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.AccessControl.xml
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Permissions.xml
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Principal.Windows.xml
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csprojAssemblyReference.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj.CoreCompileInputs.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Extensions.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Primitives.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\Newtonsoft.Json.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj.CopyComplete
+C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll

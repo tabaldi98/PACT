@@ -6,3 +6,12 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendime
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\bin\Debug\app.Tabaldi.PACT.Domain.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\bin\Debug\app.Tabaldi.PACT.Domain.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.csprojAssemblyReference.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.csproj.CoreCompileInputs.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.csproj.CopyComplete
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Domain\obj\Debug\app.Tabaldi.PACT.Domain.pdb

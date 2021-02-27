@@ -60,11 +60,35 @@
     <Compile Include="Features\AttendanceAgg\AttendanceAddForm.Designer.cs">
       <DependentUpon>AttendanceAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceMonthUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceMonthUserControl.Designer.cs">
+      <DependentUpon>AttendanceMonthUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceCurrentWeekUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceCurrentWeekUserControl.Designer.cs">
+      <DependentUpon>AttendanceCurrentWeekUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceCurrentDayUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceCurrentDayUserControl.Designer.cs">
+      <DependentUpon>AttendanceCurrentDayUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\AttendanceAgg\AttendanceListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Features\AttendanceAgg\AttendanceListForm.Designer.cs">
       <DependentUpon>AttendanceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\AttendanceAgg\AttendanceUserControl.Designer.cs">
+      <DependentUpon>AttendanceUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\ClientsAgg\ClientAddForm.cs">
       <SubType>Form</SubType>
@@ -92,8 +116,20 @@
     <EmbeddedResource Include="Features\AttendanceAgg\AttendanceAddForm.resx">
       <DependentUpon>AttendanceAddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\AttendanceAgg\AttendanceMonthUserControl.resx">
+      <DependentUpon>AttendanceMonthUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\AttendanceAgg\AttendanceCurrentWeekUserControl.resx">
+      <DependentUpon>AttendanceCurrentWeekUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\AttendanceAgg\AttendanceCurrentDayUserControl.resx">
+      <DependentUpon>AttendanceCurrentDayUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\AttendanceAgg\AttendanceListForm.resx">
       <DependentUpon>AttendanceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\AttendanceAgg\AttendanceUserControl.resx">
+      <DependentUpon>AttendanceUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\ClientsAgg\ClientAddForm.resx">
       <DependentUpon>ClientAddForm.cs</DependentUpon>

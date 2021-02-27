@@ -27,5 +27,10 @@ namespace app.Tabaldi.PACT.App
 
             panel1.Controls.Add(userControl);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SetUserControlInPanel(new AttendanceUserControl());
+        }
     }
 }

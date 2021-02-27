@@ -15,3 +15,21 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendime
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.deps.json
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.pdb
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csprojAssemblyReference.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csproj.CoreCompileInputs.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.AssemblyInfoInputs.cache
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.AssemblyInfo.cs
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csproj.CopyComplete
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
+C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb

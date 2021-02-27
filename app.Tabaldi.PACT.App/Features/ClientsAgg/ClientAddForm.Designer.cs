@@ -30,8 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientAddForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.listDaysAttendance = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtEndSunday = new System.Windows.Forms.DateTimePicker();
+            this.lblSunday = new System.Windows.Forms.Label();
+            this.dtStartSunday = new System.Windows.Forms.DateTimePicker();
+            this.dtEndSaturday = new System.Windows.Forms.DateTimePicker();
+            this.lblSaturday = new System.Windows.Forms.Label();
+            this.dtStartSaturday = new System.Windows.Forms.DateTimePicker();
+            this.dtEndFriday = new System.Windows.Forms.DateTimePicker();
+            this.lblFriday = new System.Windows.Forms.Label();
+            this.dtStartFriday = new System.Windows.Forms.DateTimePicker();
+            this.dtEndThursday = new System.Windows.Forms.DateTimePicker();
+            this.lblThursday = new System.Windows.Forms.Label();
+            this.dtStartThursday = new System.Windows.Forms.DateTimePicker();
+            this.dtEndWednesday = new System.Windows.Forms.DateTimePicker();
+            this.lblWednesday = new System.Windows.Forms.Label();
+            this.dtStartWednesday = new System.Windows.Forms.DateTimePicker();
+            this.dtEndTuesday = new System.Windows.Forms.DateTimePicker();
+            this.lblTuesday = new System.Windows.Forms.Label();
+            this.dtStartTuesday = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtEndMonday = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblMonday = new System.Windows.Forms.Label();
+            this.dtStartMonday = new System.Windows.Forms.DateTimePicker();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dayType = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtValue = new System.Windows.Forms.NumericUpDown();
+            this.monthType = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtObjective = new System.Windows.Forms.RichTextBox();
             this.lblDiag = new System.Windows.Forms.Label();
+            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
+            this.lblObjective = new System.Windows.Forms.Label();
             this.dateBt = new System.Windows.Forms.DateTimePicker();
             this.lblDtBt = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -40,51 +77,450 @@
             this.lblName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtObjective = new System.Windows.Forms.RichTextBox();
-            this.lblObjective = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblObjective);
-            this.groupBox1.Controls.Add(this.txtObjective);
-            this.groupBox1.Controls.Add(this.txtDiagnosis);
-            this.groupBox1.Controls.Add(this.lblDiag);
-            this.groupBox1.Controls.Add(this.dateBt);
-            this.groupBox1.Controls.Add(this.lblDtBt);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.lblPhone);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.groupBox6);
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 435);
+            this.groupBox1.Size = new System.Drawing.Size(793, 559);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // txtDiagnosis
+            // groupBox6
             // 
-            this.txtDiagnosis.Location = new System.Drawing.Point(10, 173);
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(371, 56);
-            this.txtDiagnosis.TabIndex = 7;
-            this.txtDiagnosis.Text = "";
+            this.groupBox6.Controls.Add(this.listDaysAttendance);
+            this.groupBox6.Controls.Add(this.label2);
+            this.groupBox6.Controls.Add(this.groupBox2);
+            this.groupBox6.Location = new System.Drawing.Point(3, 228);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(781, 250);
+            this.groupBox6.TabIndex = 24;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "groupBox6";
+            // 
+            // listDaysAttendance
+            // 
+            this.listDaysAttendance.FormattingEnabled = true;
+            this.listDaysAttendance.Location = new System.Drawing.Point(12, 30);
+            this.listDaysAttendance.Name = "listDaysAttendance";
+            this.listDaysAttendance.Size = new System.Drawing.Size(371, 214);
+            this.listDaysAttendance.TabIndex = 12;
+            this.listDaysAttendance.SelectedIndexChanged += new System.EventHandler(this.listDaysAttendance_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Dias de atendimento";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dtEndSunday);
+            this.groupBox2.Controls.Add(this.lblSunday);
+            this.groupBox2.Controls.Add(this.dtStartSunday);
+            this.groupBox2.Controls.Add(this.dtEndSaturday);
+            this.groupBox2.Controls.Add(this.lblSaturday);
+            this.groupBox2.Controls.Add(this.dtStartSaturday);
+            this.groupBox2.Controls.Add(this.dtEndFriday);
+            this.groupBox2.Controls.Add(this.lblFriday);
+            this.groupBox2.Controls.Add(this.dtStartFriday);
+            this.groupBox2.Controls.Add(this.dtEndThursday);
+            this.groupBox2.Controls.Add(this.lblThursday);
+            this.groupBox2.Controls.Add(this.dtStartThursday);
+            this.groupBox2.Controls.Add(this.dtEndWednesday);
+            this.groupBox2.Controls.Add(this.lblWednesday);
+            this.groupBox2.Controls.Add(this.dtStartWednesday);
+            this.groupBox2.Controls.Add(this.dtEndTuesday);
+            this.groupBox2.Controls.Add(this.lblTuesday);
+            this.groupBox2.Controls.Add(this.dtStartTuesday);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.dtEndMonday);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.lblMonday);
+            this.groupBox2.Controls.Add(this.dtStartMonday);
+            this.groupBox2.Location = new System.Drawing.Point(397, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(371, 219);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Horários";
+            // 
+            // dtEndSunday
+            // 
+            this.dtEndSunday.CustomFormat = "HH:mm";
+            this.dtEndSunday.Enabled = false;
+            this.dtEndSunday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndSunday.Location = new System.Drawing.Point(219, 189);
+            this.dtEndSunday.Name = "dtEndSunday";
+            this.dtEndSunday.ShowUpDown = true;
+            this.dtEndSunday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndSunday.TabIndex = 37;
+            // 
+            // lblSunday
+            // 
+            this.lblSunday.AutoSize = true;
+            this.lblSunday.Location = new System.Drawing.Point(6, 196);
+            this.lblSunday.Name = "lblSunday";
+            this.lblSunday.Size = new System.Drawing.Size(52, 13);
+            this.lblSunday.TabIndex = 35;
+            this.lblSunday.Text = "Domingo:";
+            // 
+            // dtStartSunday
+            // 
+            this.dtStartSunday.CustomFormat = "HH:mm";
+            this.dtStartSunday.Enabled = false;
+            this.dtStartSunday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartSunday.Location = new System.Drawing.Point(106, 189);
+            this.dtStartSunday.Name = "dtStartSunday";
+            this.dtStartSunday.ShowUpDown = true;
+            this.dtStartSunday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartSunday.TabIndex = 36;
+            // 
+            // dtEndSaturday
+            // 
+            this.dtEndSaturday.CustomFormat = "HH:mm";
+            this.dtEndSaturday.Enabled = false;
+            this.dtEndSaturday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndSaturday.Location = new System.Drawing.Point(219, 163);
+            this.dtEndSaturday.Name = "dtEndSaturday";
+            this.dtEndSaturday.ShowUpDown = true;
+            this.dtEndSaturday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndSaturday.TabIndex = 34;
+            // 
+            // lblSaturday
+            // 
+            this.lblSaturday.AutoSize = true;
+            this.lblSaturday.Location = new System.Drawing.Point(6, 170);
+            this.lblSaturday.Name = "lblSaturday";
+            this.lblSaturday.Size = new System.Drawing.Size(47, 13);
+            this.lblSaturday.TabIndex = 32;
+            this.lblSaturday.Text = "Sábado:";
+            // 
+            // dtStartSaturday
+            // 
+            this.dtStartSaturday.CustomFormat = "HH:mm";
+            this.dtStartSaturday.Enabled = false;
+            this.dtStartSaturday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartSaturday.Location = new System.Drawing.Point(106, 163);
+            this.dtStartSaturday.Name = "dtStartSaturday";
+            this.dtStartSaturday.ShowUpDown = true;
+            this.dtStartSaturday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartSaturday.TabIndex = 33;
+            // 
+            // dtEndFriday
+            // 
+            this.dtEndFriday.CustomFormat = "HH:mm";
+            this.dtEndFriday.Enabled = false;
+            this.dtEndFriday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndFriday.Location = new System.Drawing.Point(219, 137);
+            this.dtEndFriday.Name = "dtEndFriday";
+            this.dtEndFriday.ShowUpDown = true;
+            this.dtEndFriday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndFriday.TabIndex = 31;
+            // 
+            // lblFriday
+            // 
+            this.lblFriday.AutoSize = true;
+            this.lblFriday.Location = new System.Drawing.Point(6, 144);
+            this.lblFriday.Name = "lblFriday";
+            this.lblFriday.Size = new System.Drawing.Size(60, 13);
+            this.lblFriday.TabIndex = 29;
+            this.lblFriday.Text = "Sexta-feira:";
+            // 
+            // dtStartFriday
+            // 
+            this.dtStartFriday.CustomFormat = "HH:mm";
+            this.dtStartFriday.Enabled = false;
+            this.dtStartFriday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartFriday.Location = new System.Drawing.Point(106, 137);
+            this.dtStartFriday.Name = "dtStartFriday";
+            this.dtStartFriday.ShowUpDown = true;
+            this.dtStartFriday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartFriday.TabIndex = 30;
+            // 
+            // dtEndThursday
+            // 
+            this.dtEndThursday.CustomFormat = "HH:mm";
+            this.dtEndThursday.Enabled = false;
+            this.dtEndThursday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndThursday.Location = new System.Drawing.Point(219, 111);
+            this.dtEndThursday.Name = "dtEndThursday";
+            this.dtEndThursday.ShowUpDown = true;
+            this.dtEndThursday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndThursday.TabIndex = 28;
+            // 
+            // lblThursday
+            // 
+            this.lblThursday.AutoSize = true;
+            this.lblThursday.Location = new System.Drawing.Point(6, 118);
+            this.lblThursday.Name = "lblThursday";
+            this.lblThursday.Size = new System.Drawing.Size(64, 13);
+            this.lblThursday.TabIndex = 26;
+            this.lblThursday.Text = "Quinta-feira:";
+            // 
+            // dtStartThursday
+            // 
+            this.dtStartThursday.CustomFormat = "HH:mm";
+            this.dtStartThursday.Enabled = false;
+            this.dtStartThursday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartThursday.Location = new System.Drawing.Point(106, 111);
+            this.dtStartThursday.Name = "dtStartThursday";
+            this.dtStartThursday.ShowUpDown = true;
+            this.dtStartThursday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartThursday.TabIndex = 27;
+            // 
+            // dtEndWednesday
+            // 
+            this.dtEndWednesday.CustomFormat = "HH:mm";
+            this.dtEndWednesday.Enabled = false;
+            this.dtEndWednesday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndWednesday.Location = new System.Drawing.Point(219, 85);
+            this.dtEndWednesday.Name = "dtEndWednesday";
+            this.dtEndWednesday.ShowUpDown = true;
+            this.dtEndWednesday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndWednesday.TabIndex = 25;
+            // 
+            // lblWednesday
+            // 
+            this.lblWednesday.AutoSize = true;
+            this.lblWednesday.Location = new System.Drawing.Point(6, 92);
+            this.lblWednesday.Name = "lblWednesday";
+            this.lblWednesday.Size = new System.Drawing.Size(65, 13);
+            this.lblWednesday.TabIndex = 23;
+            this.lblWednesday.Text = "Quarta-feira:";
+            // 
+            // dtStartWednesday
+            // 
+            this.dtStartWednesday.CustomFormat = "HH:mm";
+            this.dtStartWednesday.Enabled = false;
+            this.dtStartWednesday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartWednesday.Location = new System.Drawing.Point(106, 85);
+            this.dtStartWednesday.Name = "dtStartWednesday";
+            this.dtStartWednesday.ShowUpDown = true;
+            this.dtStartWednesday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartWednesday.TabIndex = 24;
+            // 
+            // dtEndTuesday
+            // 
+            this.dtEndTuesday.CustomFormat = "HH:mm";
+            this.dtEndTuesday.Enabled = false;
+            this.dtEndTuesday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndTuesday.Location = new System.Drawing.Point(219, 59);
+            this.dtEndTuesday.Name = "dtEndTuesday";
+            this.dtEndTuesday.ShowUpDown = true;
+            this.dtEndTuesday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndTuesday.TabIndex = 22;
+            // 
+            // lblTuesday
+            // 
+            this.lblTuesday.AutoSize = true;
+            this.lblTuesday.Location = new System.Drawing.Point(6, 66);
+            this.lblTuesday.Name = "lblTuesday";
+            this.lblTuesday.Size = new System.Drawing.Size(61, 13);
+            this.lblTuesday.TabIndex = 20;
+            this.lblTuesday.Text = "Terça-feira:";
+            // 
+            // dtStartTuesday
+            // 
+            this.dtStartTuesday.CustomFormat = "HH:mm";
+            this.dtStartTuesday.Enabled = false;
+            this.dtStartTuesday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartTuesday.Location = new System.Drawing.Point(106, 59);
+            this.dtStartTuesday.Name = "dtStartTuesday";
+            this.dtStartTuesday.ShowUpDown = true;
+            this.dtStartTuesday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartTuesday.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(220, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Até";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(103, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Das";
+            // 
+            // dtEndMonday
+            // 
+            this.dtEndMonday.CustomFormat = "HH:mm";
+            this.dtEndMonday.Enabled = false;
+            this.dtEndMonday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEndMonday.Location = new System.Drawing.Point(219, 33);
+            this.dtEndMonday.Name = "dtEndMonday";
+            this.dtEndMonday.ShowUpDown = true;
+            this.dtEndMonday.Size = new System.Drawing.Size(71, 20);
+            this.dtEndMonday.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Dias";
+            // 
+            // lblMonday
+            // 
+            this.lblMonday.AutoSize = true;
+            this.lblMonday.Location = new System.Drawing.Point(6, 40);
+            this.lblMonday.Name = "lblMonday";
+            this.lblMonday.Size = new System.Drawing.Size(76, 13);
+            this.lblMonday.TabIndex = 15;
+            this.lblMonday.Text = "Segunda-feira:";
+            // 
+            // dtStartMonday
+            // 
+            this.dtStartMonday.CustomFormat = "HH:mm";
+            this.dtStartMonday.Enabled = false;
+            this.dtStartMonday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartMonday.Location = new System.Drawing.Point(106, 33);
+            this.dtStartMonday.Name = "dtStartMonday";
+            this.dtStartMonday.ShowUpDown = true;
+            this.dtStartMonday.Size = new System.Drawing.Size(71, 20);
+            this.dtStartMonday.TabIndex = 16;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.dayType);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.txtValue);
+            this.groupBox5.Controls.Add(this.monthType);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Location = new System.Drawing.Point(3, 484);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(386, 71);
+            this.groupBox5.TabIndex = 23;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Cobrança";
+            // 
+            // dayType
+            // 
+            this.dayType.AutoSize = true;
+            this.dayType.Location = new System.Drawing.Point(277, 41);
+            this.dayType.Name = "dayType";
+            this.dayType.Size = new System.Drawing.Size(52, 17);
+            this.dayType.TabIndex = 21;
+            this.dayType.TabStop = true;
+            this.dayType.Text = "Diário";
+            this.dayType.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Valor cobrado (R$)";
+            // 
+            // txtValue
+            // 
+            this.txtValue.DecimalPlaces = 2;
+            this.txtValue.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txtValue.Location = new System.Drawing.Point(13, 38);
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(107, 20);
+            this.txtValue.TabIndex = 11;
+            this.txtValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // monthType
+            // 
+            this.monthType.AutoSize = true;
+            this.monthType.Checked = true;
+            this.monthType.Location = new System.Drawing.Point(166, 41);
+            this.monthType.Name = "monthType";
+            this.monthType.Size = new System.Drawing.Size(59, 17);
+            this.monthType.TabIndex = 20;
+            this.monthType.TabStop = true;
+            this.monthType.Text = "Mensal";
+            this.monthType.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(163, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Tipo";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtObjective);
+            this.groupBox4.Controls.Add(this.lblDiag);
+            this.groupBox4.Controls.Add(this.txtDiagnosis);
+            this.groupBox4.Controls.Add(this.lblObjective);
+            this.groupBox4.Location = new System.Drawing.Point(3, 80);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(781, 142);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            // 
+            // txtObjective
+            // 
+            this.txtObjective.Location = new System.Drawing.Point(397, 30);
+            this.txtObjective.Name = "txtObjective";
+            this.txtObjective.Size = new System.Drawing.Size(371, 101);
+            this.txtObjective.TabIndex = 9;
+            this.txtObjective.Text = "";
             // 
             // lblDiag
             // 
             this.lblDiag.AutoSize = true;
-            this.lblDiag.Location = new System.Drawing.Point(7, 156);
+            this.lblDiag.Location = new System.Drawing.Point(9, 14);
             this.lblDiag.Name = "lblDiag";
             this.lblDiag.Size = new System.Drawing.Size(63, 13);
             this.lblDiag.TabIndex = 6;
             this.lblDiag.Text = "Diagnostico";
             // 
+            // txtDiagnosis
+            // 
+            this.txtDiagnosis.Location = new System.Drawing.Point(12, 30);
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.Size = new System.Drawing.Size(371, 101);
+            this.txtDiagnosis.TabIndex = 7;
+            this.txtDiagnosis.Text = "";
+            // 
+            // lblObjective
+            // 
+            this.lblObjective.AutoSize = true;
+            this.lblObjective.Location = new System.Drawing.Point(394, 14);
+            this.lblObjective.Name = "lblObjective";
+            this.lblObjective.Size = new System.Drawing.Size(110, 13);
+            this.lblObjective.TabIndex = 8;
+            this.lblObjective.Text = "Tratamento/Objetivos";
+            // 
             // dateBt
             // 
             this.dateBt.CustomFormat = "dd/MM/yyyy";
             this.dateBt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBt.Location = new System.Drawing.Point(10, 127);
+            this.dateBt.Location = new System.Drawing.Point(667, 30);
             this.dateBt.Name = "dateBt";
             this.dateBt.Size = new System.Drawing.Size(99, 20);
             this.dateBt.TabIndex = 5;
@@ -92,7 +528,7 @@
             // lblDtBt
             // 
             this.lblDtBt.AutoSize = true;
-            this.lblDtBt.Location = new System.Drawing.Point(7, 111);
+            this.lblDtBt.Location = new System.Drawing.Point(664, 12);
             this.lblDtBt.Name = "lblDtBt";
             this.lblDtBt.Size = new System.Drawing.Size(102, 13);
             this.lblDtBt.TabIndex = 4;
@@ -100,15 +536,15 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(10, 85);
+            this.txtPhone.Location = new System.Drawing.Point(395, 32);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(371, 20);
+            this.txtPhone.Size = new System.Drawing.Size(246, 20);
             this.txtPhone.TabIndex = 3;
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(7, 68);
+            this.lblPhone.Location = new System.Drawing.Point(392, 16);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(49, 13);
             this.lblPhone.TabIndex = 2;
@@ -116,7 +552,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(10, 37);
+            this.txtName.Location = new System.Drawing.Point(10, 33);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(371, 20);
             this.txtName.TabIndex = 1;
@@ -124,7 +560,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(7, 20);
+            this.lblName.Location = new System.Drawing.Point(7, 16);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 0;
@@ -134,9 +570,9 @@
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(248, 453);
+            this.button1.Location = new System.Drawing.Point(621, 577);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(89, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "Ok";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,37 +583,36 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(329, 453);
+            this.button2.Location = new System.Drawing.Point(716, 577);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(89, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "Cancelar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtObjective
+            // groupBox3
             // 
-            this.txtObjective.Location = new System.Drawing.Point(10, 251);
-            this.txtObjective.Name = "txtObjective";
-            this.txtObjective.Size = new System.Drawing.Size(371, 178);
-            this.txtObjective.TabIndex = 9;
-            this.txtObjective.Text = "";
-            // 
-            // lblObjective
-            // 
-            this.lblObjective.AutoSize = true;
-            this.lblObjective.Location = new System.Drawing.Point(7, 234);
-            this.lblObjective.Name = "lblObjective";
-            this.lblObjective.Size = new System.Drawing.Size(110, 13);
-            this.lblObjective.TabIndex = 8;
-            this.lblObjective.Text = "Tratamento/Objetivos";
+            this.groupBox3.Controls.Add(this.dateBt);
+            this.groupBox3.Controls.Add(this.lblName);
+            this.groupBox3.Controls.Add(this.txtName);
+            this.groupBox3.Controls.Add(this.lblPhone);
+            this.groupBox3.Controls.Add(this.txtPhone);
+            this.groupBox3.Controls.Add(this.lblDtBt);
+            this.groupBox3.Location = new System.Drawing.Point(15, 27);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(781, 59);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dados cadastrais";
             // 
             // ClientAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 481);
+            this.ClientSize = new System.Drawing.Size(811, 630);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -189,7 +624,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar novo Paciente";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -209,5 +654,41 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox txtObjective;
         private System.Windows.Forms.Label lblObjective;
+        private System.Windows.Forms.NumericUpDown txtValue;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckedListBox listDaysAttendance;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker dtEndSunday;
+        private System.Windows.Forms.Label lblSunday;
+        private System.Windows.Forms.DateTimePicker dtStartSunday;
+        private System.Windows.Forms.DateTimePicker dtEndSaturday;
+        private System.Windows.Forms.Label lblSaturday;
+        private System.Windows.Forms.DateTimePicker dtStartSaturday;
+        private System.Windows.Forms.DateTimePicker dtEndFriday;
+        private System.Windows.Forms.Label lblFriday;
+        private System.Windows.Forms.DateTimePicker dtStartFriday;
+        private System.Windows.Forms.DateTimePicker dtEndThursday;
+        private System.Windows.Forms.Label lblThursday;
+        private System.Windows.Forms.DateTimePicker dtStartThursday;
+        private System.Windows.Forms.DateTimePicker dtEndWednesday;
+        private System.Windows.Forms.Label lblWednesday;
+        private System.Windows.Forms.DateTimePicker dtStartWednesday;
+        private System.Windows.Forms.DateTimePicker dtEndTuesday;
+        private System.Windows.Forms.Label lblTuesday;
+        private System.Windows.Forms.DateTimePicker dtStartTuesday;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtEndMonday;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMonday;
+        private System.Windows.Forms.DateTimePicker dtStartMonday;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton dayType;
+        private System.Windows.Forms.RadioButton monthType;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -26,7 +26,10 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
                 httpClient.BaseAddress = new Uri(_baseAddress);
 
                 var response = await httpClient.GetAsync(url);
-                response.EnsureSuccessStatusCode();
+
+                if (!response.IsSuccessStatusCode) { 
+                    var a = await response.Content.ReadAsStringAsync();
+                    throw new Exception(await response.Content.ReadAsStringAsync()); }
 
                 return response;
             }
@@ -39,7 +42,8 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
                 httpClient.BaseAddress = new Uri(_baseAddress);
 
                 var response = await httpClient.PostAsJsonAsync(url, command);
-                response.EnsureSuccessStatusCode();
+
+                if (!response.IsSuccessStatusCode) { throw new Exception(await response.Content.ReadAsStringAsync()); }
 
                 return response;
             }
