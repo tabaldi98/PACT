@@ -43,5 +43,17 @@ namespace app.Tabaldi.PACT.Api.Controllers.Api
         {
             return await _attendanceAppService.UpdateAsync(command);
         }
+
+        [HttpGet]
+        [Route("{id:int}/attendances-by-type")]
+        public IQueryable<IAttendancesModelBase> RetrieveAttendancesByType(int id)
+        {
+            return (ViewPeriodType)id switch
+            {
+                ViewPeriodType.Today => _attendanceAppService.GetCurrentDayAttendances(),
+                ViewPeriodType.CurrentWeek => _attendanceAppService.GetCurrentWeekAttendances(),
+                _ => null,
+            };
+        }
     }
 }

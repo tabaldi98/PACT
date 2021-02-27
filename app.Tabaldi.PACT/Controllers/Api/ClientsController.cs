@@ -25,9 +25,9 @@ namespace app.Tabaldi.PACT.Api.Controllers.Api
         }
 
         [HttpGet]
-        public IQueryable<ClientModel> RetrieveAll()
+        public async Task<IQueryable<ClientModel>> RetrieveAllAsync()
         {
-            return _clientAppService.RetrieveAll();
+            return await _clientAppService.RetrieveAllAsync();
         }
 
         [HttpPost]

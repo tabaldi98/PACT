@@ -41,7 +41,7 @@ namespace app.Tabaldi.PACT.Api.Extensions
 
             services.AddScoped<IDatabaseContext>((serviceProvider) =>
             {
-                return new DatabaseContext("User ID=sa;Password=P@ssw0rd;Initial Catalog=FisioPACTApp;Server=.\\sql", true);
+                return new DatabaseContext("User ID=sa;Password=P@ssw0rd;Initial Catalog=FisioPACTApp;Server=ndd-serv-tab01\\sql", true);
             });
         }
 
