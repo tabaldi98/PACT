@@ -33,3 +33,20 @@ C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabald
 C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csproj.CopyComplete
 C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
 C:\Meu proj\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csprojAssemblyReference.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.AssemblyInfoInputs.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.AssemblyInfo.cs
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.deps.json
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Crosscutting.NetCore.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Application.csproj.CopyComplete

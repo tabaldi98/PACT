@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models
+namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models
 {
-    public class AttendancesNextMonthModel : IAttendancesModelBase
+    public class AttendancesCurrentMonthModel : IAttendancesModelBase
     {
         public string ClientName { get; set; }
         public string DayOfAttendance { get; set; }

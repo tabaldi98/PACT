@@ -35,3 +35,25 @@ C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PA
 C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.pdb
 C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj.CopyComplete
 C:\Meu proj\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Extensions.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Formatting.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Net.Http.Primitives.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.AccessControl.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Permissions.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Principal.Windows.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\Newtonsoft.Json.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.AccessControl.xml
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Permissions.xml
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\System.Security.Principal.Windows.xml
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csprojAssemblyReference.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj.CopyComplete
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.pdb

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models
+namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models
 {
     public class AttendancesPastMonthModel : IAttendancesModelBase
     {

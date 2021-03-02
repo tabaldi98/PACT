@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using app.Tabaldi.PACT.App.Commom;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
 
 namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 {

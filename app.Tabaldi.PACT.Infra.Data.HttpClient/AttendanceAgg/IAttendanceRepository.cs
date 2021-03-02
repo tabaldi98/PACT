@@ -12,7 +12,6 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg
         Task<IList<AttendanceModel>> GetAllAsync(int clientId);
         Task<bool> UpdateAsync(AttendanceEditCommand command);
         Task<bool> DeleteAsync(AttendanceRemoveCommand command);
-        Task<IList<T>> RetrieveByTypeAsync<T>(ViewPeriodType periodType);
     }
 
     public class AttendanceRepository : GenericRepositoryBase, IAttendanceRepository
@@ -48,13 +47,6 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg
             var response = await HttpClient.PostAsync($"{_attendanceBaseAddress}/edit", command);
 
             return await response.Content.ReadAsAsync<bool>();
-        }
-
-        public async Task<IList<T>> RetrieveByTypeAsync<T>(ViewPeriodType periodType)
-        {
-            var response = await HttpClient.GetAsync($"{_attendanceBaseAddress}/{periodType.GetHashCode()}/attendances-by-type");
-
-            return await response.Content.ReadAsAsync<IList<T>>();
         }
     }
 }

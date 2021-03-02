@@ -40,21 +40,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             dgClients.Columns[nameof(ClientModel.ID)].Visible = false;
             dgClients.Columns[nameof(ClientModel.ChargingType)].Visible = false;
             dgClients.Columns[nameof(ClientModel.Value)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.DaysOffAttendance)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartMonday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndMonday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartTuesday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndTuesday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartWednesday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndWednesday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartThursday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndThursday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartFriday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndFriday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartSaturday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndSaturday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.StartSunday)].Visible = false;
-            dgClients.Columns[nameof(ClientModel.EndSunday)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.Recurrences)].Visible = false;
             dgClients.Columns[nameof(ClientModel.RegistrationDate)].Visible = false;
 
             dgClients.Columns[nameof(ClientModel.Name)].HeaderText = "Nome";

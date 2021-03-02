@@ -11,3 +11,16 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendime
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.deps.json
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Domain.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Domain.Seedwork.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.csprojAssemblyReference.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.AssemblyInfoInputs.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.AssemblyInfo.cs
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.csproj.CopyComplete
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Infra.Data.pdb

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using app.Tabaldi.PACT.App.Commom;
+﻿using app.Tabaldi.PACT.App.Commom;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
-using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
+using app.Tabaldi.PACT.Infra.Data.HttpClient.AttendanceRecurrenceAgg;
+using System.Windows.Forms;
 
 namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 {
     public partial class AttendanceCurrentWeekUserControl : UserControl
     {
-        private readonly IAttendanceRepository _attendanceRepository;
+        private readonly IAttendanceRecurrenceRepository _attendanceRepository;
 
         public AttendanceCurrentWeekUserControl()
         {
@@ -18,7 +17,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
             dgAttendances.AutoGenerateColumns = true;
             dgAttendances.ReadOnly = true;
 
-            _attendanceRepository = new AttendanceRepository();
+            _attendanceRepository = new AttendanceRecurrenceRepository();
 
             SetData();
         }

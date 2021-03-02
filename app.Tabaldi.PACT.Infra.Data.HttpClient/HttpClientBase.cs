@@ -27,9 +27,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
 
                 var response = await httpClient.GetAsync(url);
 
-                if (!response.IsSuccessStatusCode) { 
-                    var a = await response.Content.ReadAsStringAsync();
-                    throw new Exception(await response.Content.ReadAsStringAsync()); }
+                if (!response.IsSuccessStatusCode) { throw new Exception(await response.Content.ReadAsStringAsync()); }
 
                 return response;
             }

@@ -47,7 +47,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
                 case ViewPeriodType.CurrentMonth:
                 case ViewPeriodType.PastMonth:
                 case ViewPeriodType.NextMonth:
-                    SetUserControlInPanel(new AttendanceMonthUserControl(selected.Key));
+                    //SetUserControlInPanel(new AttendanceMonthUserControl(selected.Key));
                     break;
             }
         }

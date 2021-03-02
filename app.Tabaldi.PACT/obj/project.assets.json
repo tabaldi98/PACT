@@ -8935,50 +8935,42 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anderson.tabaldi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Api.csproj",
+      "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Api.csproj",
       "projectName": "app.Tabaldi.PACT.Api",
-      "projectPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Api.csproj",
-      "packagesPath": "C:\\Users\\anderson.tabaldi\\.nuget\\packages\\",
-      "outputPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT\\obj\\",
+      "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Api.csproj",
+      "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\anderson.tabaldi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.nddigital.local/api/v2/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj": {
-              "projectPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj"
+            "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj": {
+              "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Application\\app.Tabaldi.PACT.Application.csproj"
             },
-            "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
-              "projectPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+            "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
+              "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
             },
-            "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj": {
-              "projectPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj"
+            "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj": {
+              "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain\\app.Tabaldi.PACT.Domain.csproj"
             },
-            "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
-              "projectPath": "C:\\Meu proj\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
+            "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
+              "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
             }
           }
         }
@@ -9027,7 +9019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

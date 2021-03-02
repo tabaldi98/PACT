@@ -17,31 +17,25 @@ BEGIN
 		[Diagnosis] VARCHAR(5000) NULL,
 		[Objective] VARCHAR(5000) NULL,
 		[ChargingType] TINYINT NOT NULL,
-		[Value] DECIMAL(4,2) NOT NULL,
-		[HasServiceOnMonday] BIT NOT NULL,
-        [StartMonday] DATETIME NULL,
-        [EndMonday] DATETIME NULL,
-        [HasServiceOnTuesday] BIT NOT NULL,
-        [StartTuesday] DATETIME NULL,
-        [EndTuesday] DATETIME NULL,
-        [HasServiceOnWednesday] BIT NOT NULL,
-        [StartWednesday ]DATETIME NULL,
-        [EndWednesday] DATETIME NULL,
-        [HasServiceOnThursday] BIT NOT NULL,
-        [StartThursday] DATETIME NULL,
-        [EndThursday] DATETIME NULL,
-        [HasServiceOnFriday] BIT NOT NULL,
-        [StartFriday] DATETIME NULL,
-        [EndFriday] DATETIME NULL,
-        [HasServiceOnSaturday] BIT NOT NULL,
-        [StartSaturday] DATETIME NULL,
-        [EndSaturday] DATETIME NULL,
-        [HasServiceOnSunday] BIT NOT NULL,
-        [StartSunday] DATETIME NULL,
-        [EndSunday] DATETIME NULL,
-		[RegistrationDate] DATETIME NOT NULL,
+		[Value] DECIMAL(4,2) NOT NULL
 		CONSTRAINT PK_Clients PRIMARY KEY (ID)
 	)
+END
+GO
+
+IF OBJECT_ID('AttendancesRecurrences', 'U') IS NULL
+BEGIN
+	CREATE TABLE AttendancesRecurrences
+	(
+		[ID] INT IDENTITY(1,1) NOT NULL,
+		[ClientID] INT NOT NULL,
+		[WeekDay] TINYINT NOT NULL,
+		[StartTime] DATETIME NOT NULL,
+		[EndTime] DATETIME NOT NULL
+		CONSTRAINT PK_AttendancesRecurrences PRIMARY KEY (ID)
+	)
+
+	ALTER TABLE AttendancesRecurrences ADD FOREIGN KEY ([ClientID]) REFERENCES Clients(ID);
 END
 GO
 

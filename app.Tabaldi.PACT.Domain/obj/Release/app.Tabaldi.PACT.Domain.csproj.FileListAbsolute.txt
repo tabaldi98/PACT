@@ -6,3 +6,11 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendime
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\Fisio - Atendimentos\app.Tabaldi.PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.Domain.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.Domain.Seedwork.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.Domain.Seedwork.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.csprojAssemblyReference.cache
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.csproj.CopyComplete
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.pdb
