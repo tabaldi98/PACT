@@ -166,7 +166,7 @@ namespace app.Tabaldi.PACT.Infra.Data
 
         public void Dispose()
         {
-            Context.Dispose();
+           // Context.Dispose();
         }
     }
 

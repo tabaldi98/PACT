@@ -38,6 +38,9 @@
               },
               "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
                 "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
               }
             }
           }
@@ -83,7 +86,16 @@
       "restore": {
         "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj",
         "projectName": "app.Tabaldi.PACT.Crosscutting.NetCore",
-        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj"
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Crosscutting.NetCore\\app.Tabaldi.PACT.Crosscutting.NetCore.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
+              }
+            }
+          }
+        }
       },
       "frameworks": {
         "net472": {}
@@ -193,6 +205,17 @@
         }
       }
     },
+    "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj",
+        "projectName": "app.Tabaldi.PACT.LibraryModels",
+        "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
+      },
+      "frameworks": {
+        "net452": {}
+      }
+    },
     "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT\\app.Tabaldi.PACT.Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -227,6 +250,9 @@
               },
               "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
                 "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
               }
             }
           }
@@ -244,9 +270,29 @@
               "target": "Package",
               "version": "[9.2.0, )"
             },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.19, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.19, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.19, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.5, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",

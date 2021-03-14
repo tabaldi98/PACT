@@ -42,14 +42,15 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             dgClients.Columns[nameof(ClientModel.Value)].Visible = false;
             dgClients.Columns[nameof(ClientModel.Recurrences)].Visible = false;
             dgClients.Columns[nameof(ClientModel.RegistrationDate)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.PhysiotherapeuticDiagnosis)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.Objectives)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.TreatmentConduct)].Visible = false;
 
             dgClients.Columns[nameof(ClientModel.Name)].HeaderText = "Nome";
-
             dgClients.Columns[nameof(ClientModel.Phone)].HeaderText = "Telefone";
             dgClients.Columns[nameof(ClientModel.DateOfBirth)].HeaderText = "Data de nascimento";
             dgClients.Columns[nameof(ClientModel.DateOfBirth)].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgClients.Columns[nameof(ClientModel.Diagnosis)].HeaderText = "Diagnóstico";
-            dgClients.Columns[nameof(ClientModel.Objective)].HeaderText = "Tratamento/Objetivos";
+            dgClients.Columns[nameof(ClientModel.ClinicalDiagnosis)].HeaderText = "Diagnostivo clínico"; 
 
             this.SetLoading(false);
         }
@@ -65,7 +66,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
 
             try
             {
-                this.SetLoading(false);
+                this.SetIsLoading();
                 var command = new ClientRemoveCommand();
                 command.SetIds(selecteds.Select(p => p.ID).ToArray());
                 await _clientClientRepository.DeleteAsync(command);
@@ -78,7 +79,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             }
             finally
             {
-                this.SetLoading(false);
+                this.SetNoLoading();
 
                 SetData();
             }

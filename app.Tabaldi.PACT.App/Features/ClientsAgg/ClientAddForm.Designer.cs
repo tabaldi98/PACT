@@ -65,9 +65,13 @@
             this.monthType = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtObjective = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDiagnosisPhysiotherapeutic = new System.Windows.Forms.RichTextBox();
+            this.txtTreatmentConduct = new System.Windows.Forms.RichTextBox();
             this.lblDiag = new System.Windows.Forms.Label();
-            this.txtDiagnosis = new System.Windows.Forms.RichTextBox();
+            this.txtDiagnosisClinical = new System.Windows.Forms.RichTextBox();
+            this.txtObjective = new System.Windows.Forms.RichTextBox();
             this.lblObjective = new System.Windows.Forms.Label();
             this.dateBt = new System.Windows.Forms.DateTimePicker();
             this.lblDtBt = new System.Windows.Forms.Label();
@@ -75,7 +79,7 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -94,7 +98,7 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(793, 559);
+            this.groupBox1.Size = new System.Drawing.Size(978, 592);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -103,20 +107,19 @@
             this.groupBox6.Controls.Add(this.listDaysAttendance);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.groupBox2);
-            this.groupBox6.Location = new System.Drawing.Point(3, 228);
+            this.groupBox6.Location = new System.Drawing.Point(3, 336);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(781, 250);
+            this.groupBox6.Size = new System.Drawing.Size(966, 250);
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "groupBox6";
             // 
             // listDaysAttendance
             // 
             this.listDaysAttendance.FormattingEnabled = true;
             this.listDaysAttendance.Location = new System.Drawing.Point(12, 30);
             this.listDaysAttendance.Name = "listDaysAttendance";
-            this.listDaysAttendance.Size = new System.Drawing.Size(371, 214);
-            this.listDaysAttendance.TabIndex = 12;
+            this.listDaysAttendance.Size = new System.Drawing.Size(451, 214);
+            this.listDaysAttendance.TabIndex = 11;
             this.listDaysAttendance.SelectedIndexChanged += new System.EventHandler(this.listDaysAttendance_SelectedIndexChanged);
             // 
             // label2
@@ -154,9 +157,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.lblMonday);
             this.groupBox2.Controls.Add(this.dtStartMonday);
-            this.groupBox2.Location = new System.Drawing.Point(397, 24);
+            this.groupBox2.Location = new System.Drawing.Point(490, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(371, 219);
+            this.groupBox2.Size = new System.Drawing.Size(471, 219);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Horários";
@@ -170,7 +173,7 @@
             this.dtEndSunday.Name = "dtEndSunday";
             this.dtEndSunday.ShowUpDown = true;
             this.dtEndSunday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndSunday.TabIndex = 37;
+            this.dtEndSunday.TabIndex = 25;
             // 
             // lblSunday
             // 
@@ -190,7 +193,7 @@
             this.dtStartSunday.Name = "dtStartSunday";
             this.dtStartSunday.ShowUpDown = true;
             this.dtStartSunday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartSunday.TabIndex = 36;
+            this.dtStartSunday.TabIndex = 24;
             // 
             // dtEndSaturday
             // 
@@ -201,7 +204,7 @@
             this.dtEndSaturday.Name = "dtEndSaturday";
             this.dtEndSaturday.ShowUpDown = true;
             this.dtEndSaturday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndSaturday.TabIndex = 34;
+            this.dtEndSaturday.TabIndex = 23;
             // 
             // lblSaturday
             // 
@@ -221,7 +224,7 @@
             this.dtStartSaturday.Name = "dtStartSaturday";
             this.dtStartSaturday.ShowUpDown = true;
             this.dtStartSaturday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartSaturday.TabIndex = 33;
+            this.dtStartSaturday.TabIndex = 22;
             // 
             // dtEndFriday
             // 
@@ -232,7 +235,7 @@
             this.dtEndFriday.Name = "dtEndFriday";
             this.dtEndFriday.ShowUpDown = true;
             this.dtEndFriday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndFriday.TabIndex = 31;
+            this.dtEndFriday.TabIndex = 21;
             // 
             // lblFriday
             // 
@@ -252,7 +255,7 @@
             this.dtStartFriday.Name = "dtStartFriday";
             this.dtStartFriday.ShowUpDown = true;
             this.dtStartFriday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartFriday.TabIndex = 30;
+            this.dtStartFriday.TabIndex = 20;
             // 
             // dtEndThursday
             // 
@@ -263,7 +266,7 @@
             this.dtEndThursday.Name = "dtEndThursday";
             this.dtEndThursday.ShowUpDown = true;
             this.dtEndThursday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndThursday.TabIndex = 28;
+            this.dtEndThursday.TabIndex = 19;
             // 
             // lblThursday
             // 
@@ -283,7 +286,7 @@
             this.dtStartThursday.Name = "dtStartThursday";
             this.dtStartThursday.ShowUpDown = true;
             this.dtStartThursday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartThursday.TabIndex = 27;
+            this.dtStartThursday.TabIndex = 18;
             // 
             // dtEndWednesday
             // 
@@ -294,7 +297,7 @@
             this.dtEndWednesday.Name = "dtEndWednesday";
             this.dtEndWednesday.ShowUpDown = true;
             this.dtEndWednesday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndWednesday.TabIndex = 25;
+            this.dtEndWednesday.TabIndex = 17;
             // 
             // lblWednesday
             // 
@@ -314,7 +317,7 @@
             this.dtStartWednesday.Name = "dtStartWednesday";
             this.dtStartWednesday.ShowUpDown = true;
             this.dtStartWednesday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartWednesday.TabIndex = 24;
+            this.dtStartWednesday.TabIndex = 16;
             // 
             // dtEndTuesday
             // 
@@ -325,7 +328,7 @@
             this.dtEndTuesday.Name = "dtEndTuesday";
             this.dtEndTuesday.ShowUpDown = true;
             this.dtEndTuesday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndTuesday.TabIndex = 22;
+            this.dtEndTuesday.TabIndex = 15;
             // 
             // lblTuesday
             // 
@@ -345,7 +348,7 @@
             this.dtStartTuesday.Name = "dtStartTuesday";
             this.dtStartTuesday.ShowUpDown = true;
             this.dtStartTuesday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartTuesday.TabIndex = 21;
+            this.dtStartTuesday.TabIndex = 14;
             // 
             // label5
             // 
@@ -374,7 +377,7 @@
             this.dtEndMonday.Name = "dtEndMonday";
             this.dtEndMonday.ShowUpDown = true;
             this.dtEndMonday.Size = new System.Drawing.Size(71, 20);
-            this.dtEndMonday.TabIndex = 17;
+            this.dtEndMonday.TabIndex = 13;
             // 
             // label3
             // 
@@ -403,7 +406,7 @@
             this.dtStartMonday.Name = "dtStartMonday";
             this.dtStartMonday.ShowUpDown = true;
             this.dtStartMonday.Size = new System.Drawing.Size(71, 20);
-            this.dtStartMonday.TabIndex = 16;
+            this.dtStartMonday.TabIndex = 12;
             // 
             // groupBox5
             // 
@@ -412,9 +415,9 @@
             this.groupBox5.Controls.Add(this.txtValue);
             this.groupBox5.Controls.Add(this.monthType);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(3, 484);
+            this.groupBox5.Location = new System.Drawing.Point(583, 15);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(386, 71);
+            this.groupBox5.Size = new System.Drawing.Size(386, 59);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Cobrança";
@@ -422,10 +425,10 @@
             // dayType
             // 
             this.dayType.AutoSize = true;
-            this.dayType.Location = new System.Drawing.Point(277, 41);
+            this.dayType.Location = new System.Drawing.Point(277, 36);
             this.dayType.Name = "dayType";
             this.dayType.Size = new System.Drawing.Size(52, 17);
-            this.dayType.TabIndex = 21;
+            this.dayType.TabIndex = 6;
             this.dayType.TabStop = true;
             this.dayType.Text = "Diário";
             this.dayType.UseVisualStyleBackColor = true;
@@ -433,7 +436,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 22);
+            this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 10;
@@ -443,20 +446,20 @@
             // 
             this.txtValue.DecimalPlaces = 2;
             this.txtValue.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.txtValue.Location = new System.Drawing.Point(13, 38);
+            this.txtValue.Location = new System.Drawing.Point(13, 33);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(107, 20);
-            this.txtValue.TabIndex = 11;
+            this.txtValue.TabIndex = 4;
             this.txtValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // monthType
             // 
             this.monthType.AutoSize = true;
             this.monthType.Checked = true;
-            this.monthType.Location = new System.Drawing.Point(166, 41);
+            this.monthType.Location = new System.Drawing.Point(166, 36);
             this.monthType.Name = "monthType";
             this.monthType.Size = new System.Drawing.Size(59, 17);
-            this.monthType.TabIndex = 20;
+            this.monthType.TabIndex = 5;
             this.monthType.TabStop = true;
             this.monthType.Text = "Mensal";
             this.monthType.UseVisualStyleBackColor = true;
@@ -464,7 +467,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 22);
+            this.label6.Location = new System.Drawing.Point(163, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 19;
@@ -472,63 +475,101 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.txtObjective);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.txtDiagnosisPhysiotherapeutic);
+            this.groupBox4.Controls.Add(this.txtTreatmentConduct);
             this.groupBox4.Controls.Add(this.lblDiag);
-            this.groupBox4.Controls.Add(this.txtDiagnosis);
+            this.groupBox4.Controls.Add(this.txtDiagnosisClinical);
+            this.groupBox4.Controls.Add(this.txtObjective);
             this.groupBox4.Controls.Add(this.lblObjective);
             this.groupBox4.Location = new System.Drawing.Point(3, 80);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(781, 142);
+            this.groupBox4.Size = new System.Drawing.Size(966, 250);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             // 
-            // txtObjective
+            // label8
             // 
-            this.txtObjective.Location = new System.Drawing.Point(397, 30);
-            this.txtObjective.Name = "txtObjective";
-            this.txtObjective.Size = new System.Drawing.Size(371, 101);
-            this.txtObjective.TabIndex = 9;
-            this.txtObjective.Text = "";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(487, 107);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Conduta de tratamento";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(487, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Diagnostico fisioterapêutico";
+            // 
+            // txtDiagnosisPhysiotherapeutic
+            // 
+            this.txtDiagnosisPhysiotherapeutic.Location = new System.Drawing.Point(490, 30);
+            this.txtDiagnosisPhysiotherapeutic.Name = "txtDiagnosisPhysiotherapeutic";
+            this.txtDiagnosisPhysiotherapeutic.Size = new System.Drawing.Size(471, 76);
+            this.txtDiagnosisPhysiotherapeutic.TabIndex = 8;
+            this.txtDiagnosisPhysiotherapeutic.Text = "";
+            // 
+            // txtTreatmentConduct
+            // 
+            this.txtTreatmentConduct.Location = new System.Drawing.Point(490, 123);
+            this.txtTreatmentConduct.Name = "txtTreatmentConduct";
+            this.txtTreatmentConduct.Size = new System.Drawing.Size(471, 111);
+            this.txtTreatmentConduct.TabIndex = 10;
+            this.txtTreatmentConduct.Text = "";
             // 
             // lblDiag
             // 
             this.lblDiag.AutoSize = true;
             this.lblDiag.Location = new System.Drawing.Point(9, 14);
             this.lblDiag.Name = "lblDiag";
-            this.lblDiag.Size = new System.Drawing.Size(63, 13);
+            this.lblDiag.Size = new System.Drawing.Size(98, 13);
             this.lblDiag.TabIndex = 6;
-            this.lblDiag.Text = "Diagnostico";
+            this.lblDiag.Text = "Diagnostico clínico";
             // 
-            // txtDiagnosis
+            // txtDiagnosisClinical
             // 
-            this.txtDiagnosis.Location = new System.Drawing.Point(12, 30);
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(371, 101);
-            this.txtDiagnosis.TabIndex = 7;
-            this.txtDiagnosis.Text = "";
+            this.txtDiagnosisClinical.Location = new System.Drawing.Point(12, 30);
+            this.txtDiagnosisClinical.Name = "txtDiagnosisClinical";
+            this.txtDiagnosisClinical.Size = new System.Drawing.Size(451, 37);
+            this.txtDiagnosisClinical.TabIndex = 7;
+            this.txtDiagnosisClinical.Text = "";
+            // 
+            // txtObjective
+            // 
+            this.txtObjective.Location = new System.Drawing.Point(10, 123);
+            this.txtObjective.Name = "txtObjective";
+            this.txtObjective.Size = new System.Drawing.Size(458, 111);
+            this.txtObjective.TabIndex = 9;
+            this.txtObjective.Text = "";
             // 
             // lblObjective
             // 
             this.lblObjective.AutoSize = true;
-            this.lblObjective.Location = new System.Drawing.Point(394, 14);
+            this.lblObjective.Location = new System.Drawing.Point(10, 107);
             this.lblObjective.Name = "lblObjective";
-            this.lblObjective.Size = new System.Drawing.Size(110, 13);
+            this.lblObjective.Size = new System.Drawing.Size(51, 13);
             this.lblObjective.TabIndex = 8;
-            this.lblObjective.Text = "Tratamento/Objetivos";
+            this.lblObjective.Text = "Objetivos";
             // 
             // dateBt
             // 
             this.dateBt.CustomFormat = "dd/MM/yyyy";
             this.dateBt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBt.Location = new System.Drawing.Point(667, 30);
+            this.dateBt.Location = new System.Drawing.Point(459, 33);
             this.dateBt.Name = "dateBt";
             this.dateBt.Size = new System.Drawing.Size(99, 20);
-            this.dateBt.TabIndex = 5;
+            this.dateBt.TabIndex = 3;
             // 
             // lblDtBt
             // 
             this.lblDtBt.AutoSize = true;
-            this.lblDtBt.Location = new System.Drawing.Point(664, 12);
+            this.lblDtBt.Location = new System.Drawing.Point(456, 16);
             this.lblDtBt.Name = "lblDtBt";
             this.lblDtBt.Size = new System.Drawing.Size(102, 13);
             this.lblDtBt.TabIndex = 4;
@@ -536,15 +577,15 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(395, 32);
+            this.txtPhone.Location = new System.Drawing.Point(306, 33);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(246, 20);
-            this.txtPhone.TabIndex = 3;
+            this.txtPhone.Size = new System.Drawing.Size(125, 20);
+            this.txtPhone.TabIndex = 2;
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(392, 16);
+            this.lblPhone.Location = new System.Drawing.Point(303, 16);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(49, 13);
             this.lblPhone.TabIndex = 2;
@@ -554,8 +595,8 @@
             // 
             this.txtName.Location = new System.Drawing.Point(10, 33);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(371, 20);
-            this.txtName.TabIndex = 1;
+            this.txtName.Size = new System.Drawing.Size(275, 20);
+            this.txtName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -566,31 +607,31 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome";
             // 
-            // button1
+            // btnOk
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(621, 577);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ok";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
+            this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOk.Location = new System.Drawing.Point(806, 610);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(89, 40);
+            this.btnOk.TabIndex = 26;
+            this.btnOk.Text = "Ok";
+            this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(716, 577);
+            this.button2.Location = new System.Drawing.Point(901, 610);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "Cancelar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // groupBox3
             // 
@@ -602,7 +643,7 @@
             this.groupBox3.Controls.Add(this.lblDtBt);
             this.groupBox3.Location = new System.Drawing.Point(15, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(781, 59);
+            this.groupBox3.Size = new System.Drawing.Size(574, 59);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados cadastrais";
@@ -611,10 +652,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 630);
+            this.ClientSize = new System.Drawing.Size(992, 652);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -649,8 +690,8 @@
         private System.Windows.Forms.DateTimePicker dateBt;
         private System.Windows.Forms.Label lblDtBt;
         private System.Windows.Forms.Label lblDiag;
-        private System.Windows.Forms.RichTextBox txtDiagnosis;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox txtDiagnosisClinical;
+        private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox txtObjective;
         private System.Windows.Forms.Label lblObjective;
@@ -690,5 +731,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox txtDiagnosisPhysiotherapeutic;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox txtTreatmentConduct;
     }
 }

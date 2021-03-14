@@ -1,4 +1,5 @@
 ﻿using app.Tabaldi.PACT.Application.ClientsModule;
+using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
 using app.Tabaldi.PACT.Infra.Data.Context;
@@ -10,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Api.Extensions
 {
@@ -36,8 +36,10 @@ namespace app.Tabaldi.PACT.Api.Extensions
                 services.AddScoped(@interface, implementation);
             }
 
+            services.AddScoped<IAuthenticatedUser, AuthenticatedUser>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(Lazy<>), typeof(Lazier<>));
 
             services.AddScoped<IDatabaseContext>((serviceProvider) =>
             {
@@ -55,5 +57,12 @@ namespace app.Tabaldi.PACT.Api.Extensions
 
             return new[] { applicationAssembly, domainAssembly, dataAssembly };
         }
+    }
+
+    internal class Lazier<T> : Lazy<T> where T : class
+    {
+        public Lazier(IServiceProvider provider)
+            : base(() => provider.GetService<T>())
+        { }
     }
 }

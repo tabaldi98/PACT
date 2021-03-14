@@ -4,6 +4,7 @@ using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
         IQueryable<AttendanceModel> RetrieveAllByClientID(int clientId);
         Task<bool> RemoveAsync(AttendanceRemoveCommand command);
         Task<bool> UpdateAsync(AttendanceEditCommand command);
+        Task<string> ExecuteQueueAsync();
     }
 
     public class AttendanceAppService : AppServiceBase<IAttendanceRepository>, IAttendanceAppService
@@ -62,6 +64,33 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
             attendance.SetDescription(command.Description);
 
             return await CommitAsync();
+        }
+
+        public async Task<string> ExecuteQueueAsync()
+        {
+            var clients = await _clientRepository.RetrieveAsync(null, false, p => p.Recurrences);
+
+            foreach (var client in clients)
+            {
+                foreach (var attendanceRecurrence in client.Recurrences)
+                {
+                    var yesterday = DateTime.Now.AddDays(-1);
+
+                    var attendanceExists = await Repository.AnyAsync(AttendanceSpecifications.RetrieveByClientIDAndDate(yesterday, client.ID));
+                    if (attendanceExists) { continue; }
+
+                    if (yesterday.DayOfWeek == (DayOfWeek)attendanceRecurrence.WeekDay)
+                    {
+                        var attendance = new Attendance(client.ID, yesterday, attendanceRecurrence.StartTime, attendanceRecurrence.EndTime, string.Empty);
+
+                        Repository.Create(attendance);
+                    }
+                }
+            }
+
+            await CommitAsync();
+
+            return Guid.NewGuid().ToString();
         }
     }
 }

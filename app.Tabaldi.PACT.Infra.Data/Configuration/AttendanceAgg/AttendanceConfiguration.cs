@@ -1,5 +1,4 @@
 ﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,6 +17,10 @@ namespace app.Tabaldi.PACT.Infra.Data.Configuration.AttendanceAgg
             //builder.Property(x => x.InstagramURL).HasVarcharUnicodeColumnType(255).IsOptional();
             //builder.Property(x => x.FacebookURL).HasVarcharUnicodeColumnType(255).IsOptional();
             //builder.Property(x => x.WhatsAppURL).HasVarcharUnicodeColumnType(255).IsOptional();
+
+            builder.HasOne(p => p.Client).WithMany(p => p.Attendances).HasForeignKey(p => p.ClientID);
+
+            //  builder.HasOne(p => p.Client).WithMany(p => p.Attendances).HasForeignKey(p => p.ClientID);
         }
     }
 }

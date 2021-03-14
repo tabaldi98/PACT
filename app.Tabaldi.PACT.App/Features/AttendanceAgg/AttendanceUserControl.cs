@@ -20,9 +20,9 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
             {
                 { ViewPeriodType.Today, "Hoje" },
                 { ViewPeriodType.CurrentWeek, "Esta semana" },
-                { ViewPeriodType.CurrentMonth, "Este mês" },
-                { ViewPeriodType.NextMonth, "Próximo mês" },
-                { ViewPeriodType.PastMonth, "Mês passado" }
+               // { ViewPeriodType.CurrentMonth, "Este mês" },
+             //   { ViewPeriodType.NextMonth, "Próximo mês" },
+               // { ViewPeriodType.PastMonth, "Mês passado" }
             };
 
             cmbPeriodType.DataSource = new BindingSource(periods, null);

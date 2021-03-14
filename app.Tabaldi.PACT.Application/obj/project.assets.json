@@ -2160,6 +2160,9 @@
       },
       "app.Tabaldi.PACT.Crosscutting.NetCore/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "app.Tabaldi.PACT.LibraryModels": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/app.Tabaldi.PACT.Crosscutting.NetCore.dll": {}
         },
@@ -2203,6 +2206,15 @@
         },
         "runtime": {
           "bin/placeholder/app.Tabaldi.PACT.Infra.Data.dll": {}
+        }
+      },
+      "app.Tabaldi.PACT.LibraryModels/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/app.Tabaldi.PACT.LibraryModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/app.Tabaldi.PACT.LibraryModels.dll": {}
         }
       }
     }
@@ -7435,6 +7447,11 @@
       "type": "project",
       "path": "../app.Tabaldi.PACT.Infra.Data/app.Tabaldi.PACT.Infra.Data.csproj",
       "msbuildProject": "../app.Tabaldi.PACT.Infra.Data/app.Tabaldi.PACT.Infra.Data.csproj"
+    },
+    "app.Tabaldi.PACT.LibraryModels/1.0.0": {
+      "type": "project",
+      "path": "../app.Tabaldi.PACT.LibraryModels/app.Tabaldi.PACT.LibraryModels.csproj",
+      "msbuildProject": "../app.Tabaldi.PACT.LibraryModels/app.Tabaldi.PACT.LibraryModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7443,7 +7460,8 @@
       "app.Tabaldi.PACT.Crosscutting.NetCore >= 1.0.0",
       "app.Tabaldi.PACT.Domain >= 1.0.0",
       "app.Tabaldi.PACT.Domain.Seedwork >= 1.0.0",
-      "app.Tabaldi.PACT.Infra.Data >= 1.0.0"
+      "app.Tabaldi.PACT.Infra.Data >= 1.0.0",
+      "app.Tabaldi.PACT.LibraryModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7483,6 +7501,9 @@
             },
             "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj": {
               "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Infra.Data\\app.Tabaldi.PACT.Infra.Data.csproj"
+            },
+            "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+              "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
             }
           }
         }

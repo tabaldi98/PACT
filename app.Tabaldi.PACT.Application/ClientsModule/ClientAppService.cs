@@ -14,6 +14,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
     {
         Task<int> CreateAsync(ClientAddCommand command);
         IQueryable<ClientModel> RetrieveAll();
+        Task<ClientModel> GetByIdAsync(int clientId);
         Task<bool> UpdateAsync(ClientEditCommand command);
         Task<bool> RemoveAsync(ClientRemoveCommand command);
     }
@@ -28,7 +29,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
             IUnitOfWork unitOfWork)
             : base(repository, unitOfWork)
         {
-            this._attendanceRepository = attendanceRepository;
+            _attendanceRepository = attendanceRepository;
         }
 
         public async Task<int> CreateAsync(ClientAddCommand command)
@@ -36,13 +37,9 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
             var exists = await Repository.AnyAsync(ClientSpecifications.RetrieveByName(command.Name));
             Guard.ObjectAlreadyExists<Client>(exists);
 
-            var client = new Client(command.Name, command.Diagnosis, command.DateOfBirth, command.Phone, command.Objective);
-            client.SetCosts(command.Value, command.ChargingType);
+            var client = new Client(command.Name, command.DateOfBirth, command.Phone, command.ClinicalDiagnosis, command.PhysiotherapeuticDiagnosis, command.TreatmentConduct, command.Objectives, command.ChargingType, command.Value);
 
-            foreach (var recurrence in command.Recurrences)
-            {
-                client.AddRecurrence(new AttendanceRecurrence(recurrence.WeekDay, recurrence.StartTime, recurrence.EndTime, client));
-            }
+            client.AddRecurrences(command.Recurrences.Select(p => new AttendanceRecurrence(p.WeekDay, p.StartTime, p.EndTime, client)));
 
             var obj = Repository.Create(client);
 
@@ -51,10 +48,17 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
             return obj.ID;
         }
 
+        public Task<ClientModel> GetByIdAsync(int clientId)
+        {
+            return Repository.SingleOrDefaultAsync(new ClientModelMapper(ClientSpecifications.RetrieveByID(clientId)));
+        }
+
         public async Task<bool> RemoveAsync(ClientRemoveCommand command)
         {
             foreach (var clientId in command.IDs)
             {
+                var client = await Repository.SingleOrDefaultAsync(ClientSpecifications.RetrieveByID(clientId), true);
+                client.Recurrences.Clear();
                 var attendances = await _attendanceRepository.RetrieveAsync(AttendanceSpecifications.RetrieveByClientID(clientId));
                 await _attendanceRepository.DeleteAsync(attendances.Select(p => p.ID).ToArray());
             }
@@ -75,17 +79,14 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
 
             client.SetName(command.Name);
             client.SetDateOfBirth(command.DateOfBirth);
-            client.SetDiagnosis(command.Diagnosis);
+            client.SetDiagnosis(command.ClinicalDiagnosis, command.PhysiotherapeuticDiagnosis);
             client.SetPhone(command.Phone);
-            client.SetObjective(command.Objective);
+            client.SetObjective(command.Objectives);
             client.SetCosts(command.Value, command.ChargingType);
+            client.SetTreatmentConduct(command.TreatmentConduct);
 
             client.Recurrences.Clear();
-
-            foreach (var recurrence in command.Recurrences)
-            {
-                client.AddRecurrence(new AttendanceRecurrence(recurrence.WeekDay, recurrence.StartTime, recurrence.EndTime, client));
-            }
+            client.AddRecurrences(command.Recurrences.Select(p => new AttendanceRecurrence(p.WeekDay, p.StartTime, p.EndTime, client)));
 
             return await CommitAsync();
         }

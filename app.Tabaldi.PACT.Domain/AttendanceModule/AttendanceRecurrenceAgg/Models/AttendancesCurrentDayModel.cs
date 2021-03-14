@@ -8,6 +8,7 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
 {
     public class AttendancesCurrentDayModel : IAttendancesModelBase
     {
+        public int ClientID { get; set; }
         public string ClientName { get; set; }
         public DateTime StartAttendance { get; set; }
         public DateTime EndAttendance { get; set; }
@@ -20,6 +21,7 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
 
         public Expression<Func<AttendanceRecurrence, AttendancesCurrentDayModel>> Selector => p => new AttendancesCurrentDayModel()
         {
+            ClientID = p.Client.ID,
             ClientName = p.Client.Name,
             StartAttendance = p.StartTime,
             EndAttendance = p.EndTime,

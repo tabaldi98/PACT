@@ -7,7 +7,8 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg
         ICreateRepository<Attendance>,
         IRetrieveMapper<Attendance>,
         ISingleRepository<Attendance>,
-        IRetrieveRepository<Attendance>
+        IRetrieveRepository<Attendance>,
+        IAnyRepository<Attendance>
     {
         Task DeleteAsync(int[] ids);
     }

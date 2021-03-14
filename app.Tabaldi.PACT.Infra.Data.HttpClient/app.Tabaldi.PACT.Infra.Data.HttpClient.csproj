@@ -107,10 +107,12 @@
   <ItemGroup>
     <Compile Include="AttendanceAgg\IAttendanceRepository.cs" />
     <Compile Include="AttendanceRecurrenceAgg\IAttendanceRecurrenceRepository.cs" />
+    <Compile Include="AuthenticationModule\IUserRepository.cs" />
     <Compile Include="ClientAgg\IClientRepository.cs" />
     <Compile Include="GenericRepositoryBase.cs" />
     <Compile Include="HttpClientBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsModule\ReportRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj">
@@ -120,6 +122,10 @@
     <ProjectReference Include="..\app.Tabaldi.PACT.Domain\app.Tabaldi.PACT.Domain.csproj">
       <Project>{637AA12B-46B1-4794-922E-C4A17D1F5A33}</Project>
       <Name>app.Tabaldi.PACT.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\app.Tabaldi.PACT.LibraryModels\app.Tabaldi.PACT.LibraryModels.csproj">
+      <Project>{2f2ef1ba-5619-495c-bb92-501acd44d4d8}</Project>
+      <Name>app.Tabaldi.PACT.LibraryModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

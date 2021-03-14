@@ -79,7 +79,7 @@
             this.btnAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnAttendance.Image")));
             this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAttendance.Location = new System.Drawing.Point(15, 8);
+            this.btnAttendance.Location = new System.Drawing.Point(15, 10);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(97, 23);
             this.btnAttendance.TabIndex = 3;

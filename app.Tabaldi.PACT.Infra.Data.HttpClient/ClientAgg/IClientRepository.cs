@@ -13,6 +13,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg
     {
         Task<int> CreateAsync(ClientAddCommand command);
         Task<IList<ClientModel>> GetAllAsync();
+        Task<ClientModel> GetByIdAsync(int clientId);
         Task<bool> UpdateAsync(ClientEditCommand command);
         Task<bool> DeleteAsync(ClientRemoveCommand command);
     }
@@ -34,7 +35,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg
         public async Task<bool> DeleteAsync(ClientRemoveCommand command)
         {
             var response = await HttpClient.PostAsync($"{_clientBaseAddress}/remove", command);
-            
+
             return await response.Content.ReadAsAsync<bool>();
         }
 
@@ -43,6 +44,13 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg
             var response = await HttpClient.GetAsync(_clientBaseAddress);
 
             return await response.Content.ReadAsAsync<IList<ClientModel>>();
+        }
+
+        public async Task<ClientModel> GetByIdAsync(int clientId)
+        {
+            var response = await HttpClient.GetAsync($"{_clientBaseAddress}/{clientId}");
+
+            return await response.Content.ReadAsAsync<ClientModel>();
         }
 
         public async Task<bool> UpdateAsync(ClientEditCommand command)

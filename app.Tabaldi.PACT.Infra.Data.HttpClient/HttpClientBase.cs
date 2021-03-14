@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Infra.Data.HttpClient
@@ -13,10 +14,12 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
     public class HttpClientBase : IHttpClientBase
     {
         private readonly string _baseAddress;
+        private readonly string _token;
 
         public HttpClientBase()
         {
             _baseAddress = System.Configuration.ConfigurationManager.AppSettings["ServerBaseAddress"];
+            _token = System.Configuration.ConfigurationManager.AppSettings["Token"];
         }
 
         public async Task<HttpResponseMessage> GetAsync(string url)
@@ -24,6 +27,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
             using (var httpClient = new System.Net.Http.HttpClient())
             {
                 httpClient.BaseAddress = new Uri(_baseAddress);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
 
                 var response = await httpClient.GetAsync(url);
 
@@ -38,6 +42,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
             using (var httpClient = new System.Net.Http.HttpClient())
             {
                 httpClient.BaseAddress = new Uri(_baseAddress);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
 
                 var response = await httpClient.PostAsJsonAsync(url, command);
 

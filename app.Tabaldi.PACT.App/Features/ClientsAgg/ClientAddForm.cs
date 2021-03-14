@@ -1,10 +1,12 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
+using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Commands;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using Autofac;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,19 +16,23 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
 {
     public partial class ClientAddForm : Form
     {
-        private readonly IClientClientRepository _clientRepository;
+        private readonly IClientClientRepository _clientRepository = AutofacConfig.Container.Value.Resolve<IClientClientRepository>();
         private int? _id;
 
         public ClientAddForm(ClientModel clientModel = null)
         {
             InitializeComponent();
 
-            _clientRepository = new ClientClientRepository();
+            //_clientRepository = new ClientClientRepository();
 
-            SetData(clientModel);
+            SetListDaysData();
+
+            SetClientData(clientModel);
         }
 
-        public void SetData(ClientModel clientModel = null)
+        #region Métodos privados
+
+        private void SetListDaysData()
         {
             var periods = new Dictionary<WeekDay, string>
             {
@@ -42,15 +48,20 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             ((ListBox)listDaysAttendance).DataSource = new BindingSource(periods, null);
             ((ListBox)listDaysAttendance).DisplayMember = "Value";
             ((ListBox)listDaysAttendance).ValueMember = "Key";
+        }
 
+        public void SetClientData(ClientModel clientModel = null)
+        {
             if (clientModel != null)
             {
                 txtName.Text = clientModel.Name;
                 txtPhone.Text = clientModel.Phone;
-                txtDiagnosis.Text = clientModel.Diagnosis;
+                txtDiagnosisClinical.Text = clientModel.ClinicalDiagnosis;
+                txtObjective.Text = clientModel.Objectives;
+                txtDiagnosisPhysiotherapeutic.Text = clientModel.PhysiotherapeuticDiagnosis;
+                txtTreatmentConduct.Text = clientModel.TreatmentConduct;
                 dateBt.Value = clientModel.DateOfBirth;
                 _id = clientModel.ID;
-                txtObjective.Text = clientModel.Objective;
                 txtValue.Value = clientModel.Value;
                 dayType.Checked = clientModel.ChargingType == ChargingType.Day;
                 monthType.Checked = clientModel.ChargingType == ChargingType.Month;
@@ -106,8 +117,123 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
                 dtEndSunday.Value = sundayEnabled ? sundayRecurrence.EndTime : dtEndSunday.Value;
             }
         }
+        private bool ValidateAllFields()
+        {
+            if (txtName.IsNullOrEmpty())
+            {
+                MessageBoxExtensions.ShowEmptyFieldMessage(lblName.Text);
 
-        private async void button1_Click(object sender, EventArgs e)
+                return false;
+            }
+
+            if (txtPhone.IsNullOrEmpty())
+            {
+                MessageBoxExtensions.ShowEmptyFieldMessage(lblPhone.Text);
+
+                return false;
+            }
+
+            if (dateBt.Value == null)
+            {
+                MessageBoxExtensions.ShowEmptyFieldMessage(lblDtBt.Text);
+
+                return false;
+            }
+
+            if (txtDiagnosisClinical.IsNullOrEmpty())
+            {
+                MessageBoxExtensions.ShowEmptyFieldMessage(lblDiag.Text);
+
+                return false;
+            }
+
+            if (txtObjective.IsNullOrEmpty())
+            {
+                MessageBoxExtensions.ShowEmptyFieldMessage(lblObjective.Text);
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private ClientAddCommand GetAddCommand()
+        {
+            return new ClientAddCommand()
+            {
+                Name = txtName.Text,
+                Phone = txtPhone.Text,
+                DateOfBirth = dateBt.Value,
+                ClinicalDiagnosis = txtDiagnosisClinical.Text,
+                Objectives = txtObjective.Text,
+                PhysiotherapeuticDiagnosis = txtDiagnosisPhysiotherapeutic.Text,
+                TreatmentConduct = txtTreatmentConduct.Text,
+                ChargingType = dayType.Checked ? ChargingType.Day : ChargingType.Month,
+                Value = txtValue.Value,
+                Recurrences = GetRecurrenceCommand(),
+            };
+        }
+
+        private ClientEditCommand GetEditCommand()
+        {
+            return new ClientEditCommand()
+            {
+                ID = _id.Value,
+                Name = txtName.Text,
+                Phone = txtPhone.Text,
+                DateOfBirth = dateBt.Value,
+                ClinicalDiagnosis = txtDiagnosisClinical.Text,
+                Objectives = txtObjective.Text,
+                PhysiotherapeuticDiagnosis = txtDiagnosisPhysiotherapeutic.Text,
+                TreatmentConduct = txtTreatmentConduct.Text,
+                ChargingType = dayType.Checked ? ChargingType.Day : ChargingType.Month,
+                Value = txtValue.Value,
+                Recurrences = GetRecurrenceCommand(),
+            };
+        }
+
+        private IEnumerable<AttendanceRecurrenceCommand> GetRecurrenceCommand()
+        {
+            foreach (var checkedWeekDay in GetCheckedItems())
+            {
+                yield return new AttendanceRecurrenceCommand()
+                {
+                    WeekDay = checkedWeekDay,
+                    StartTime =
+                         checkedWeekDay == WeekDay.Monday ? dtStartMonday.Value :
+                         checkedWeekDay == WeekDay.Tuesday ? dtStartTuesday.Value :
+                         checkedWeekDay == WeekDay.Wednesday ? dtStartWednesday.Value :
+                         checkedWeekDay == WeekDay.Thursday ? dtStartThursday.Value :
+                         checkedWeekDay == WeekDay.Friday ? dtStartFriday.Value :
+                         checkedWeekDay == WeekDay.Saturday ? dtStartSaturday.Value :
+                         checkedWeekDay == WeekDay.Sunday ? dtStartSunday.Value
+                            : DateTime.Now,
+                    EndTime =
+                         checkedWeekDay == WeekDay.Monday ? dtEndMonday.Value :
+                         checkedWeekDay == WeekDay.Tuesday ? dtEndTuesday.Value :
+                         checkedWeekDay == WeekDay.Wednesday ? dtEndWednesday.Value :
+                         checkedWeekDay == WeekDay.Thursday ? dtEndThursday.Value :
+                         checkedWeekDay == WeekDay.Friday ? dtEndFriday.Value :
+                         checkedWeekDay == WeekDay.Saturday ? dtEndSaturday.Value :
+                         checkedWeekDay == WeekDay.Sunday ? dtEndSunday.Value
+                            : DateTime.Now,
+                };
+            }
+        }
+
+        private IEnumerable<WeekDay> GetCheckedItems()
+        {
+            foreach (var selectedItem in listDaysAttendance.CheckedItems)
+            {
+                yield return ((KeyValuePair<WeekDay, string>)selectedItem).Key;
+            }
+        }
+
+        #endregion
+
+        #region Eventos
+
+        private async void btnOk_Click(object sender, EventArgs e)
         {
             if (!ValidateAllFields()) { return; }
 
@@ -138,107 +264,8 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             }
         }
 
-        private bool ValidateAllFields()
-        {
-            if (txtName.IsNullOrEmpty())
-            {
-                MessageBoxExtensions.ShowEmptyFieldsMessage(lblName.Text);
 
-                return false;
-            }
-
-            if (txtPhone.IsNullOrEmpty())
-            {
-                MessageBoxExtensions.ShowEmptyFieldsMessage(lblPhone.Text);
-
-                return false;
-            }
-
-            if (dateBt.Value == null)
-            {
-                MessageBoxExtensions.ShowEmptyFieldsMessage(lblDtBt.Text);
-
-                return false;
-            }
-
-            if (txtDiagnosis.IsNullOrEmpty())
-            {
-                MessageBoxExtensions.ShowEmptyFieldsMessage(lblDiag.Text);
-
-                return false;
-            }
-
-            if (txtObjective.IsNullOrEmpty())
-            {
-                MessageBoxExtensions.ShowEmptyFieldsMessage(lblObjective.Text);
-
-                return false;
-            }
-
-            return true;
-        }
-
-        public ClientAddCommand GetAddCommand()
-        {
-            return new ClientAddCommand()
-            {
-                Name = txtName.Text,
-                Phone = txtPhone.Text,
-                DateOfBirth = dateBt.Value,
-                Diagnosis = txtDiagnosis.Text,
-                Objective = txtObjective.Text,
-                ChargingType = dayType.Checked ? ChargingType.Day : ChargingType.Month,
-                Value = txtValue.Value,
-                Recurrences = GetRecurrenceCommand(),
-            };
-        }
-
-        public ClientEditCommand GetEditCommand()
-        {
-            return new ClientEditCommand()
-            {
-                ID = _id.Value,
-                Name = txtName.Text,
-                Phone = txtPhone.Text,
-                DateOfBirth = dateBt.Value,
-                Diagnosis = txtDiagnosis.Text,
-                Objective = txtObjective.Text,
-                ChargingType = dayType.Checked ? ChargingType.Day : ChargingType.Month,
-                Value = txtValue.Value,
-                Recurrences = GetRecurrenceCommand(),
-            };
-        }
-
-        private IEnumerable<AttendanceRecurrenceCommand> GetRecurrenceCommand()
-        {
-            foreach (var item in GetCheckedItems())
-            {
-                yield return new AttendanceRecurrenceCommand()
-                {
-                    WeekDay = item,
-                    StartTime =
-                         item == WeekDay.Monday ? dtStartMonday.Value :
-                         item == WeekDay.Tuesday ? dtStartTuesday.Value :
-                         item == WeekDay.Wednesday ? dtStartWednesday.Value :
-                         item == WeekDay.Thursday ? dtStartThursday.Value :
-                         item == WeekDay.Friday ? dtStartFriday.Value :
-                         item == WeekDay.Saturday ? dtStartSaturday.Value :
-                         item == WeekDay.Sunday ? dtStartSunday.Value
-                         : DateTime.Now,
-                    EndTime =
-                         item == WeekDay.Monday ? dtEndMonday.Value :
-                         item == WeekDay.Tuesday ? dtEndTuesday.Value :
-                         item == WeekDay.Wednesday ? dtEndWednesday.Value :
-                         item == WeekDay.Thursday ? dtEndThursday.Value :
-                         item == WeekDay.Friday ? dtEndFriday.Value :
-                         item == WeekDay.Saturday ? dtEndSaturday.Value :
-                         item == WeekDay.Sunday ? dtEndSunday.Value
-                         : DateTime.Now,
-                };
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
         }
@@ -269,12 +296,6 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             dtStartSunday.Enabled = dtEndSunday.Enabled = sundayEnabled;
         }
 
-        private IEnumerable<WeekDay> GetCheckedItems()
-        {
-            foreach (var selectedItem in listDaysAttendance.CheckedItems)
-            {
-                yield return ((KeyValuePair<WeekDay, string>)selectedItem).Key;
-            }
-        }
+        #endregion
     }
 }

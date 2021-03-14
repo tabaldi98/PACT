@@ -50,7 +50,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
             dgAttendances.Columns[nameof(AttendanceModel.HourFinish)].HeaderText = "Hora Final";
             dgAttendances.Columns[nameof(AttendanceModel.HourFinish)].DefaultCellStyle.Format = "HH:mm";
 
-            dgAttendances.Columns[nameof(AttendanceModel.Description)].HeaderText = "Descrição";
+            dgAttendances.Columns[nameof(AttendanceModel.Description)].HeaderText = "Evolução";
 
             this.SetLoading(false);
         }
@@ -107,7 +107,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
             }
         }
 
-        private void btnEdit_Click(object sender, System.EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             new AttendanceAddForm(_clientModel, GetSelecteds().FirstOrDefault()).ShowDialog();
 
@@ -149,6 +149,13 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 
                 SetData();
             }
+        }
+
+        private void dgAttendances_DoubleClick(object sender, EventArgs e)
+        {
+            new AttendanceAddForm(_clientModel, GetSelecteds().FirstOrDefault()).ShowDialog();
+
+            SetData();
         }
     }
 

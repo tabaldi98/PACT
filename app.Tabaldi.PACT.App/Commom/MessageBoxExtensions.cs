@@ -16,7 +16,12 @@ namespace app.Tabaldi.PACT.App.Commom
 
         public static void ShowErrorMessage(Exception ex)
         {
-            MessageBox.Show(ex.Message, _title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowErrorMessage(ex.Message);
+        }
+
+        public static void ShowErrorMessage(string message)
+        {
+            MessageBox.Show(message, _title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static DialogResult ShowDeleteQuestionMessage(string fieldName, IList<string> fields)
@@ -28,14 +33,27 @@ namespace app.Tabaldi.PACT.App.Commom
                 sb.Append("\n - " + field);
             }
 
-           return MessageBox.Show(sb.ToString(), _title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return MessageBox.Show(sb.ToString(), _title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
-        public static void ShowEmptyFieldsMessage(string field)
+        public static void ShowEmptyFieldMessage(string field)
         {
             var sb = new StringBuilder();
             sb.Append("Preencha o seguinte campo:");
             sb.Append("\n - " + field);
+
+            MessageBox.Show(sb.ToString(), _title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static void ShowEmptyFieldsMessage(params string[] fields)
+        {
+            var sb = new StringBuilder();
+            sb.Append("Preencha o(s) seguinte(s) campo(s):");
+
+            foreach (var field in fields)
+            {
+                sb.Append("\n - " + field);
+            }
 
             MessageBox.Show(sb.ToString(), _title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

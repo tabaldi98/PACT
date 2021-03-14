@@ -11,30 +11,38 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string Diagnosis { get; set; }
-        public string Objective { get; set; }
-        public ChargingType ChargingType { get; set; }
         public decimal Value { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public ChargingType ChargingType { get; set; }
+        public string ClinicalDiagnosis { get; set; }
+        public string PhysiotherapeuticDiagnosis { get; set; }
+        public string Objectives { get; set; }
+        public string TreatmentConduct { get; set; }
+        public DateTimeOffset RegistrationDate { get; set; }
 
         // Reverse Navigation
         private readonly List<AttendanceRecurrence> _recurrences;
         public virtual ICollection<AttendanceRecurrence> Recurrences => _recurrences;
 
+        private readonly List<Attendance> _attendances;
+        public virtual ICollection<Attendance> Attendances => _attendances;
+
         public Client()
         {
+            _attendances = new List<Attendance>();
             _recurrences = new List<AttendanceRecurrence>();
-            RegistrationDate = DateTime.UtcNow;
+            RegistrationDate = DateTimeOffset.Now;
         }
 
-        public Client(string name, string diagnosis, DateTime dateBirth, string phone, string objective)
+        public Client(string name, DateTime dateBirth, string phone, string clinicalDiagnosis, string physiotherapeuticDiagnosis, string treatmentConduct, string objective, ChargingType chargingType, decimal value)
             : this()
         {
             SetName(name);
-            SetDiagnosis(diagnosis);
+            SetDiagnosis(clinicalDiagnosis, physiotherapeuticDiagnosis);
             SetDateOfBirth(dateBirth);
             SetPhone(phone);
             SetObjective(objective);
+            SetTreatmentConduct(treatmentConduct);
+            SetCosts(value, chargingType);
         }
 
         public void SetName(string name)
@@ -42,9 +50,10 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
             Name = name;
         }
 
-        public void SetDiagnosis(string diagnosis)
+        public void SetDiagnosis(string clinicalDiagnosis, string physiotherapeuticDiagnosis)
         {
-            Diagnosis = diagnosis;
+            PhysiotherapeuticDiagnosis = physiotherapeuticDiagnosis;
+            ClinicalDiagnosis = clinicalDiagnosis;
         }
 
         public void SetDateOfBirth(DateTime dateBirth)
@@ -59,7 +68,12 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
 
         public void SetObjective(string objective)
         {
-            Objective = objective;
+            Objectives = objective;
+        }
+
+        public void SetTreatmentConduct(string treatmentConduct)
+        {
+            TreatmentConduct = treatmentConduct;
         }
 
         public void SetCosts(decimal value, ChargingType chargingType)
@@ -73,12 +87,9 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
             Recurrences.Add(attendanceRecurrence);
         }
 
-        public void AddRecurrence(IList<AttendanceRecurrence> attendancesRecurrences)
+        public void AddRecurrences(IEnumerable<AttendanceRecurrence> attendancesRecurrences)
         {
-            foreach (var attendanceRecurrence in attendancesRecurrences)
-            {
-                AddRecurrence(attendanceRecurrence);
-            }
+            _recurrences.AddRange(attendancesRecurrences);
         }
     }
 }

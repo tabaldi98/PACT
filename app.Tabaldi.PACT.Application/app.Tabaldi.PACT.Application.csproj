@@ -13,6 +13,7 @@
     <ProjectReference Include="..\app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj" />
     <ProjectReference Include="..\app.Tabaldi.PACT.Domain\app.Tabaldi.PACT.Domain.csproj" />
     <ProjectReference Include="..\app.Tabaldi.PACT.Infra.Data\app.Tabaldi.PACT.Infra.Data.csproj" />
+    <ProjectReference Include="..\app.Tabaldi.PACT.LibraryModels\app.Tabaldi.PACT.LibraryModels.csproj" />
   </ItemGroup>
 
 </Project>

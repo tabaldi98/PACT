@@ -25,7 +25,7 @@ namespace app.Tabaldi.PACT.Infra.Data.UnitOfWork
         {
             if (!_disposed && disposing)
             {
-                _context.Dispose();
+                //_context.Dispose();
             }
 
             _disposed = true;

@@ -33,6 +33,8 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
                 dtDay.Value = _attendanceModel.Date;
                 initialHour.Value = _attendanceModel.HourInitial;
                 finishHour.Value = _attendanceModel.HourFinish;
+
+                txtDescription.Focus();
             }
         }
 
@@ -76,7 +78,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
         {
             if (initialHour.Value > finishHour.Value)
             {
-                MessageBoxExtensions.ShowEmptyFieldsMessage("A hora inicial não pode ser maior que a hora final");
+                MessageBoxExtensions.ShowEmptyFieldMessage("A hora inicial não pode ser maior que a hora final");
 
                 return false;
             }

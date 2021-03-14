@@ -6,7 +6,7 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg
 {
     public class Attendance : Entity
     {
-        public int ClientID { get; private set; }
+        public virtual int ClientID { get; private set; }
         public DateTime Date { get; private set; }
         public DateTime HourInitial { get; private set; }
         public DateTime HourFinish { get; private set; }

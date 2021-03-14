@@ -9,17 +9,30 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
     {
         IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances();
         IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances();
+        IQueryable<AttendancesCurrentMonthModel> GetCurrentMonthAttendances();
     }
 
-    public class AttendanceRecurrenceRepository : AppServiceBase<IAttendanceRecurrenceRepository>, IAttendanceRecurrenceAppService
+    public class AttendanceRecurrenceAppService : AppServiceBase<IAttendanceRecurrenceRepository>, IAttendanceRecurrenceAppService
     {
-        public AttendanceRecurrenceRepository(IAttendanceRecurrenceRepository repository)
+        public AttendanceRecurrenceAppService(IAttendanceRecurrenceRepository repository)
             : base(repository)
         { }
 
         public IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances()
         {
             return Repository.RetrieveMapper(new AttendancesCurrentDayModelMapper());
+        }
+
+        public IQueryable<AttendancesCurrentMonthModel> GetCurrentMonthAttendances()
+        {
+            var data = Repository.RetrieveMapper(new AttendancesCurrentMonthModelMapper());
+
+            //data = data.Select(p => new AttendancesCurrentMonthModel()
+            //{
+
+            //});
+
+            return data;
         }
 
         public IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances()

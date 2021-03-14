@@ -1,4 +1,5 @@
 ﻿using app.Tabaldi.PACT.Domain.Seedwork.Specification;
+using System;
 
 namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg
 {
@@ -12,6 +13,20 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg
         public static ISpecification<Attendance> RetrieveByID(int id)
         {
             return new DirectSpecification<Attendance>(p => p.ID == id);
+        }
+
+        public static ISpecification<Attendance> RetrieveByClientIDAndDate(DateTime day, int clientId)
+        {
+            var initDate = new DateTime(day.Year, day.Month, day.Day, 0, 0, 0, 0);
+            var endDate = new DateTime(day.Year, day.Month, day.Day, 23, 59, 59, 59);
+            return new DirectSpecification<Attendance>(p => p.ClientID == clientId && (p.Date >= initDate && p.Date <= endDate));
+        }
+
+        public static ISpecification<Attendance> RetrieveByDate(DateTime startDate, DateTime endDate)
+        {
+            startDate = new DateTime(startDate.Year, startDate.Month, startDate.Day, 0, 0, 0, 0);
+            endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59, 59);
+            return new DirectSpecification<Attendance>(p => p.Date >= startDate && p.Date <= endDate);
         }
     }
 }

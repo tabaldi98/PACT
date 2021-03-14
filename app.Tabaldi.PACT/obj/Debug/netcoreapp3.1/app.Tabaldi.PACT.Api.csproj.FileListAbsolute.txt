@@ -301,8 +301,6 @@ C:\Meu proj\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.d
 C:\Meu proj\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.pdb
 C:\Meu proj\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.genruntimeconfig.cache
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.csprojAssemblyReference.cache
-D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.AssemblyInfoInputs.cache
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.AssemblyInfo.cs
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.dll
@@ -450,3 +448,25 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\staticwebassets\app.Tabaldi.PACT.Api.StaticWebAssets.Manifest.cache
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\staticwebassets\app.Tabaldi.PACT.Api.StaticWebAssets.xml
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\Hangfire.Core.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\ca\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\de\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\es\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\fa\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\fr\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\nl\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\pt-BR\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\pt-PT\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\pt\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\zh-TW\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\zh\Hangfire.Core.resources.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\Hangfire.AspNetCore.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\Hangfire.SqlServer.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.LibraryModels.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\app.Tabaldi.PACT.LibraryModels.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\obj\Debug\netcoreapp3.1\app.Tabaldi.PACT.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -46,13 +46,14 @@
             this.dgAttendances.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAttendances.Size = new System.Drawing.Size(869, 507);
             this.dgAttendances.TabIndex = 1;
+            this.dgAttendances.DoubleClick += new System.EventHandler(this.dgAttendances_DoubleClick);
             // 
-            // AttendanceCurrentDayUserControl
+            // AttendanceCurrentWeekUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgAttendances);
-            this.Name = "AttendanceCurrentDayUserControl";
+            this.Name = "AttendanceCurrentWeekUserControl";
             this.Size = new System.Drawing.Size(875, 510);
             ((System.ComponentModel.ISupportInitialize)(this.dgAttendances)).EndInit();
             this.ResumeLayout(false);

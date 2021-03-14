@@ -35,8 +35,8 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
                         new AttendancesCurrentMonthModel()
                         {
                             ClientName ="zé",
-                            DayOfAttendance = "Segunda",
-                            DayOffWeekAttendance = DateTime.Now,
+                            //DayOfAttendance = "Segunda",
+                            //DayOffWeekAttendance = DateTime.Now,
                             EndAttendance = DateTime.Now.AddHours(-1),
                             StartAttendance = DateTime.Now,
                         }

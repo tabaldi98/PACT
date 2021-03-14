@@ -29,11 +29,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Domain.Seedwork", "app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj", "{C7555CA5-D8D1-4BF1-9AEF-52296FE1FBC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Application", "app.Tabaldi.PACT.Application\app.Tabaldi.PACT.Application.csproj", "{9ED923F9-4C81-428C-8B01-58F45799F371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app.Tabaldi.PACT.Application", "app.Tabaldi.PACT.Application\app.Tabaldi.PACT.Application.csproj", "{9ED923F9-4C81-428C-8B01-58F45799F371}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Infra.Data.HttpClient", "app.Tabaldi.PACT.Infra.Data.HttpClient\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj", "{3237F209-20FF-4D08-AD3F-D8FFA0C611A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Crosscutting.NetCore", "app.Tabaldi.PACT.Crosscutting.NetCore\app.Tabaldi.PACT.Crosscutting.NetCore.csproj", "{4CC0E652-F23B-47C2-BE1A-FFD90C814904}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.4 Services", "5.4 Services", "{9A8CF704-EEF4-4EE8-A361-A113CDA86CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.Service.QueuesManager", "app.Tabaldi.PACT.Service.QueuesManager\app.Tabaldi.PACT.Service.QueuesManager.csproj", "{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app.Tabaldi.PACT.LibraryModels", "app.Tabaldi.PACT.LibraryModels\app.Tabaldi.PACT.LibraryModels.csproj", "{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +79,14 @@ Global
 		{4CC0E652-F23B-47C2-BE1A-FFD90C814904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC0E652-F23B-47C2-BE1A-FFD90C814904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC0E652-F23B-47C2-BE1A-FFD90C814904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +103,8 @@ Global
 		{9ED923F9-4C81-428C-8B01-58F45799F371} = {9B3C4341-2F5B-4F27-A115-6226EE158202}
 		{3237F209-20FF-4D08-AD3F-D8FFA0C611A7} = {63546832-6B2B-49CE-B572-726FA0955F52}
 		{4CC0E652-F23B-47C2-BE1A-FFD90C814904} = {6ED8CD47-809B-4F63-916B-15E8C9D13AC8}
+		{9A8CF704-EEF4-4EE8-A361-A113CDA86CF9} = {7646D805-B371-4AA2-830F-94676CF3EFA6}
+		{D6CEE9E9-88FD-4A4C-88B1-FDF4ECA61573} = {9A8CF704-EEF4-4EE8-A361-A113CDA86CF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D13B285-F755-4A10-A2FE-B75D8060658D}

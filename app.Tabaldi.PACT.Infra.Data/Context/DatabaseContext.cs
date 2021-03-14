@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Infra.Data.Context
 {
-    public interface IDatabaseContext : IDisposable
+    public interface IDatabaseContext //: IDisposable
     {
         EntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
@@ -40,5 +40,10 @@ namespace app.Tabaldi.PACT.Infra.Data.Context
 
             base.OnModelCreating(modelBuilder);
         }
+
+        //public override void Dispose()
+        //{
+        //    base.Dispose();
+        //}
     }
 }

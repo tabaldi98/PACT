@@ -15,18 +15,22 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string Diagnosis { get; set; }
-        public string Objective { get; set; }
-        public ChargingType ChargingType { get; set; }
         public decimal Value { get; set; }
+        public ChargingType ChargingType { get; set; }
+        public string ClinicalDiagnosis { get; set; }
+        public string PhysiotherapeuticDiagnosis { get; set; }
+        public string Objectives { get; set; }
+        public string TreatmentConduct { get; set; }
         public IEnumerable<AttendanceRecurrenceModel> Recurrences { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public DateTimeOffset RegistrationDate { get; set; }
     }
 
     public class ClientModelMapper : IHaveMapper<Client, ClientModel>
     {
-        public ClientModelMapper()
-        { }
+        public ClientModelMapper(ISpecification<Client> specification = null)
+        {
+            Specification = specification;
+        }
 
         public Expression<Func<Client, ClientModel>> Selector => client => new ClientModel()
         {
@@ -34,8 +38,11 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models
             Name = client.Name,
             Phone = client.Phone,
             DateOfBirth = client.DateOfBirth,
-            Diagnosis = client.Diagnosis,
-            Objective = client.Objective,
+            Objectives = client.Objectives,
+            ClinicalDiagnosis = client.ClinicalDiagnosis,
+            PhysiotherapeuticDiagnosis = client.PhysiotherapeuticDiagnosis,
+            RegistrationDate = client.RegistrationDate,
+            TreatmentConduct = client.TreatmentConduct,
             ChargingType = client.ChargingType,
             Value = client.Value,
             Recurrences = client.Recurrences.Select(p => new AttendanceRecurrenceModel()
@@ -47,6 +54,6 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models
             }),
         };
 
-        public ISpecification<Client> Specification => null;
+        public ISpecification<Client> Specification { get; }
     }
 }

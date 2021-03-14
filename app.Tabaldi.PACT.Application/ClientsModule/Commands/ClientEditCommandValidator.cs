@@ -15,7 +15,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule.Commands
                 .NotNull()
                 .Length(1, 255);
 
-            RuleFor(p => p.Diagnosis)
+            RuleFor(p => p.ClinicalDiagnosis)
                 .NotNull()
                 .Length(1, 5000);
 

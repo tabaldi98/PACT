@@ -57,3 +57,5 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\obj\Debug\app.Tabaldi.PACT.Infra.Data.HttpClient.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.LibraryModels.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Infra.Data.HttpClient\bin\Debug\app.Tabaldi.PACT.LibraryModels.pdb

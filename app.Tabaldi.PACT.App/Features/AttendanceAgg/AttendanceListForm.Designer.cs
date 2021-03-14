@@ -80,6 +80,7 @@
             this.dgAttendances.Size = new System.Drawing.Size(628, 421);
             this.dgAttendances.TabIndex = 1;
             this.dgAttendances.SelectionChanged += new System.EventHandler(this.dgAttendances_SelectionChanged);
+            this.dgAttendances.DoubleClick += new System.EventHandler(this.dgAttendances_DoubleClick);
             // 
             // groupBox4
             // 

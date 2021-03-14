@@ -33,8 +33,57 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=6.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.1.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +93,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthenticationModule\AuthenticationForm.cs">
@@ -52,8 +102,16 @@
     <Compile Include="AuthenticationModule\AuthenticationForm.Designer.cs">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthenticationModule\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationModule\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationModule\TokenHelper.cs" />
     <Compile Include="Commom\FormExtensions.cs" />
     <Compile Include="Commom\MessageBoxExtensions.cs" />
+    <Compile Include="DependencyResolution\AutofacConfig.cs" />
     <Compile Include="Features\AttendanceAgg\AttendanceAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +160,25 @@
     <Compile Include="Features\ClientsAgg\ClientsUserControl.Designer.cs">
       <DependentUpon>ClientsUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\ReportsAgg\ReportFinancialPdfWriter.cs" />
+    <Compile Include="Features\ReportsAgg\ReportsDefaultFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\ReportsAgg\ReportsDefaultFilterForm.Designer.cs">
+      <DependentUpon>ReportsDefaultFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ReportsAgg\ReportSelectClientIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\ReportsAgg\ReportSelectClientIDForm.Designer.cs">
+      <DependentUpon>ReportSelectClientIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ReportsAgg\ReportsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\ReportsAgg\ReportsUserControl.Designer.cs">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +189,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthenticationModule\AuthenticationForm.resx">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticationModule\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\AttendanceAgg\AttendanceAddForm.resx">
       <DependentUpon>AttendanceAddForm.cs</DependentUpon>
@@ -137,6 +217,15 @@
     <EmbeddedResource Include="Features\ClientsAgg\ClientsUserControl.resx">
       <DependentUpon>ClientsUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\ReportsAgg\ReportsDefaultFilterForm.resx">
+      <DependentUpon>ReportsDefaultFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\ReportsAgg\ReportSelectClientIDForm.resx">
+      <DependentUpon>ReportSelectClientIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\ReportsAgg\ReportsUserControl.resx">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +238,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +265,15 @@
       <Project>{3237F209-20FF-4D08-AD3F-D8FFA0C611A7}</Project>
       <Name>app.Tabaldi.PACT.Infra.Data.HttpClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\app.Tabaldi.PACT.LibraryModels\app.Tabaldi.PACT.LibraryModels.csproj">
+      <Project>{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}</Project>
+      <Name>app.Tabaldi.PACT.LibraryModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\fundo_branco.icon.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

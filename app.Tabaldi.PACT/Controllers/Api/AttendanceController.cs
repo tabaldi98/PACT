@@ -1,12 +1,14 @@
 ﻿using app.Tabaldi.PACT.Application.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Api.Controllers.Api
 {
+    [Authorize]
     [Route("api/attendance")]
     [ApiController]
     public class AttendanceController : ControllerBase

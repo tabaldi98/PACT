@@ -1,12 +1,14 @@
 ﻿using app.Tabaldi.PACT.Application.ClientsModule;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Api.Controllers.Api
 {
+    [Authorize]
     [Route("api/client")]
     [ApiController]
     public class ClientsController
@@ -28,6 +30,13 @@ namespace app.Tabaldi.PACT.Api.Controllers.Api
         public IQueryable<ClientModel> RetrieveAll()
         {
             return _clientAppService.RetrieveAll();
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<ClientModel> GetByIdAsync(int id)
+        {
+            return await _clientAppService.GetByIdAsync(id);
         }
 
         [HttpPost]

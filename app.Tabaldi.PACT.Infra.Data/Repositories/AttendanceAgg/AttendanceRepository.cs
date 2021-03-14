@@ -48,5 +48,10 @@ namespace app.Tabaldi.PACT.Infra.Data.Repositories.AttendanceAgg
         {
             return GenericRepository.RetrieveAsync(specification, autoDetectChangesEnabled, includeExpressions);
         }
+
+        public Task<bool> AnyAsync(ISpecification<Attendance> specification)
+        {
+            return GenericRepository.AnyAsync(specification);
+        }
     }
 }

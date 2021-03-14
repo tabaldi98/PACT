@@ -10,8 +10,6 @@ namespace app.Tabaldi.PACT.Infra.Data.Configuration.ClientsAgg
         {
             builder.ToTable("Clients", "dbo");
             builder.HasKey(x => x.ID);
-
-            builder.Ignore(p => p.RegistrationDate);
         }
     }
 }

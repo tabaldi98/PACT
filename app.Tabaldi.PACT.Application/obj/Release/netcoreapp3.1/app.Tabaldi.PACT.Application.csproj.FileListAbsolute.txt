@@ -32,3 +32,5 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Application.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Application.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\obj\Release\netcoreapp3.1\app.Tabaldi.PACT.Application.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.LibraryModels.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Application\bin\Release\netcoreapp3.1\app.Tabaldi.PACT.LibraryModels.pdb
