@@ -16,8 +16,10 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
 
     public class AttendancesCurrentDayModelMapper : IHaveMapper<AttendanceRecurrence, AttendancesCurrentDayModel>
     {
-        public AttendancesCurrentDayModelMapper()
-        { }
+        public AttendancesCurrentDayModelMapper(int userId)
+        {
+            Specification = AttendanceRecurrenceSpecifications.RetrieveAttendanceToCurrentDay(userId);
+        }
 
         public Expression<Func<AttendanceRecurrence, AttendancesCurrentDayModel>> Selector => p => new AttendancesCurrentDayModel()
         {
@@ -27,6 +29,6 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
             EndAttendance = p.EndTime,
         };
 
-        public ISpecification<AttendanceRecurrence> Specification => AttendanceRecurrenceSpecifications.RetrieveAttendanceToCurrentDay();
+        public ISpecification<AttendanceRecurrence> Specification { get; }
     }
 }

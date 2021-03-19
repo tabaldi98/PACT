@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Windows.Forms;
 
 namespace app.Tabaldi.PACT.App.AuthenticationModule
 {
@@ -9,7 +10,11 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
         public static void SetToken(string token)
         {
             _token = token;
-            ConfigurationManager.AppSettings["Token"] = token;
+
+            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings["Token"].Value = token;
+            configuration.Save(ConfigurationSaveMode.Modified);
+            //ConfigurationManager.RefreshSection("appSettings");
         }
 
         public static string Token()

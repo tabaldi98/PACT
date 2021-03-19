@@ -6,6 +6,7 @@ using app.Tabaldi.PACT.Infra.Data.Context;
 using app.Tabaldi.PACT.Infra.Data.Repositories.ClientsAgg;
 using app.Tabaldi.PACT.Infra.Data.UnitOfWork;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace app.Tabaldi.PACT.Api.Extensions
 {
     public static class DependenciesExtensions
     {
-        public static void AddDependencies(this IServiceCollection services)
+        public static void AddDependencies(this IServiceCollection services, IConfiguration configuration)
         {
             var interfaces = new List<Type>();
             var implementations = new List<Type>();
@@ -43,7 +44,7 @@ namespace app.Tabaldi.PACT.Api.Extensions
 
             services.AddScoped<IDatabaseContext>((serviceProvider) =>
             {
-                return new DatabaseContext("User ID=sa;Password=P@ssw0rd;Initial Catalog=FisioPACTApp;Server=.\\sql", true);
+                return new DatabaseContext(configuration.GetSection("ConnectionStrings").GetSection("DbConnection").Value, true);
             });
         }
 

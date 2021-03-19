@@ -1,6 +1,7 @@
-﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+﻿using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
+using System;
 using System.Linq;
 
 namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
@@ -14,13 +15,19 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
 
     public class AttendanceRecurrenceAppService : AppServiceBase<IAttendanceRecurrenceRepository>, IAttendanceRecurrenceAppService
     {
-        public AttendanceRecurrenceAppService(IAttendanceRecurrenceRepository repository)
+        private readonly Lazy<IAuthenticatedUser> _authenticatedUser;
+
+        public AttendanceRecurrenceAppService(
+            IAttendanceRecurrenceRepository repository,
+            Lazy<IAuthenticatedUser> authenticatedUser)
             : base(repository)
-        { }
+        {
+            _authenticatedUser = authenticatedUser;
+        }
 
         public IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances()
         {
-            return Repository.RetrieveMapper(new AttendancesCurrentDayModelMapper());
+            return Repository.RetrieveMapper(new AttendancesCurrentDayModelMapper(_authenticatedUser.Value.User.ID));
         }
 
         public IQueryable<AttendancesCurrentMonthModel> GetCurrentMonthAttendances()
@@ -37,7 +44,7 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
 
         public IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances()
         {
-            return Repository.RetrieveMapper(new AttendancesCurrentWeekModelMapper());
+            return Repository.RetrieveMapper(new AttendancesCurrentWeekModelMapper(_authenticatedUser.Value.User.ID));
         }
     }
 }

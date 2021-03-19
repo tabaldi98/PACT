@@ -294,6 +294,18 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
+            "NLog.Schema": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -301,6 +313,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

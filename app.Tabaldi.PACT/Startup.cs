@@ -14,24 +14,26 @@ namespace app.Tabaldi.PACT.Api
 {
     public class Startup
     {
-        private Lazy<IJwtOptions> JwtOptions { get; }
+        private readonly IConfiguration _configuration;
+        private readonly Lazy<IJwtOptions> _jwtOptions;
 
         public Startup(IConfiguration configuration)
         {
-            JwtOptions = new Lazy<IJwtOptions>(() => new JwtOptions());
+            _jwtOptions = new Lazy<IJwtOptions>(() => new JwtOptions());
+            _configuration = configuration;
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersConfigure();
 
-            services.AddDependencies();
+            services.AddDependencies(_configuration);
 
             services.AddSwagger();
 
-            services.AddHangFire();
+            services.AddHangFire(_configuration);
 
-            services.AddJwtBearerAuthentication(JwtOptions.Value);
+            services.AddJwtBearerAuthentication(_jwtOptions.Value);
 
             services.AddAuthorization(p =>
             {

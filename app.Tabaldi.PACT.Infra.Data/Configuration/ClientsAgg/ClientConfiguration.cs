@@ -10,6 +10,8 @@ namespace app.Tabaldi.PACT.Infra.Data.Configuration.ClientsAgg
         {
             builder.ToTable("Clients", "dbo");
             builder.HasKey(x => x.ID);
+
+            builder.HasOne(p => p.User).WithMany(p => p.Clients).HasForeignKey(p => p.UserID);
         }
     }
 }

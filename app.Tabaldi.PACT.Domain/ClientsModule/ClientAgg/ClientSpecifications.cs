@@ -13,5 +13,10 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         {
             return new DirectSpecification<Client>(p => p.Name.ToLower() == name.ToLower());
         }
+
+        public static ISpecification<Client> RetrieveByUserID(int userId)
+        {
+            return new DirectSpecification<Client>(p => p.UserID == userId);
+        }
     }
 }

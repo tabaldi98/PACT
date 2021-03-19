@@ -5,11 +5,16 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg
 {
     public static class AttendanceRecurrenceSpecifications
     {
-        public static ISpecification<AttendanceRecurrence> RetrieveAttendanceToCurrentDay()
+        public static ISpecification<AttendanceRecurrence> RetrieveAttendanceToCurrentDay(int userId)
         {
             var weekDay = (WeekDay)DateTime.Now.DayOfWeek;
 
-            return new DirectSpecification<AttendanceRecurrence>(p => p.WeekDay == weekDay);
+            return new DirectSpecification<AttendanceRecurrence>(p => p.Client.UserID == userId && p.WeekDay == weekDay);
+        }
+
+        public static ISpecification<AttendanceRecurrence> RetrieveByUserID(int userId)
+        {
+            return new DirectSpecification<AttendanceRecurrence>(p => p.Client.UserID == userId);
         }
     }
 }

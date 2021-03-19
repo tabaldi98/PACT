@@ -2,6 +2,8 @@
 
 namespace app.Tabaldi.PACT.Domain.UsersModule.UserAgg
 {
-    public interface IUserRepository : ISingleRepository<User>
+    public interface IUserRepository :
+        ISingleRepository<User>,
+        IRetrieveRepository<User>
     { }
 }

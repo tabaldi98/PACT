@@ -16,8 +16,10 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
 
     public class AttendancesCurrentWeekModelMapper : IHaveMapper<AttendanceRecurrence, AttendancesCurrentWeekModel>
     {
-        public AttendancesCurrentWeekModelMapper()
-        { }
+        public AttendancesCurrentWeekModelMapper(int userId)
+        {
+            Specification = AttendanceRecurrenceSpecifications.RetrieveByUserID(userId);
+        }
 
         public Expression<Func<AttendanceRecurrence, AttendancesCurrentWeekModel>> Selector => p => new AttendancesCurrentWeekModel()
         {
@@ -36,6 +38,6 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Model
             : "-"
         };
 
-        public ISpecification<AttendanceRecurrence> Specification => null;
+        public ISpecification<AttendanceRecurrence> Specification { get; }
     }
 }

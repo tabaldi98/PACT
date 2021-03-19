@@ -2,11 +2,9 @@
 using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ReportsModule;
-using app.Tabaldi.PACT.LibraryModels.ReportsModule.Commands;
 using Autofac;
 using System;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,6 +13,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
     public partial class ReportsUserControl : UserControl
     {
         public readonly IReportRepository _reportRepository = AutofacConfig.Container.Value.Resolve<IReportRepository>();
+        private readonly IClientClientRepository _clientClientRepository = AutofacConfig.Container.Value.Resolve<IClientClientRepository>();
 
         public ReportsUserControl()
         {
@@ -70,7 +69,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
                 {
                     this.SetIsLoading();
 
-                    var report = await _reportRepository.RetrieveAttendanceReportAsync(new ReportClientIDFilterCommand() { ClientID = form.ClientID });
+                    var report = await _reportRepository.RetrieveAttendanceReportAsync(form.Command);
 
                     if (!report.Any())
                     {
@@ -99,7 +98,40 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
                     this.SetNoLoading();
                 }
             }
+        }
 
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            var form = new ReportSelectClientIDForm(false);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    this.SetIsLoading();
+
+                    var client = await _clientClientRepository.GetByIdAsync(form.Command.ClientID);
+
+                    var saveFileDialog = new SaveFileDialog
+                    {
+                        Filter = "Arquivo PDF (*.PDF) | *.PDF",
+                        RestoreDirectory = true,
+                        FileName = $"Relatório_Paciente_{client.Name}.PDF",
+                    };
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        ReportFinancialPdfWriter.WriteClientReport(client, saveFileDialog.FileName);
+
+                        Process.Start(saveFileDialog.FileName);
+                    }
+                }
+                catch (Exception ex)
+                { }
+                finally
+                {
+                    this.SetNoLoading();
+                }
+            }
         }
     }
 }

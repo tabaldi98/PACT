@@ -13,5 +13,10 @@ namespace app.Tabaldi.PACT.Domain.UsersModule.UserAgg
         {
             return new DirectSpecification<User>(p => p.UserName.ToLower().Equals(userName.ToLower()) && p.Password.Equals(password));
         }
+
+        public static ISpecification<User> RetrieveUserAlertsEnabled()
+        {
+            return new DirectSpecification<User>(p => p.SendAlerts);
+        }
     }
 }

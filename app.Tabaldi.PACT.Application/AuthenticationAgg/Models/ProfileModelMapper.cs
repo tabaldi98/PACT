@@ -21,10 +21,10 @@ namespace app.Tabaldi.PACT.Application.AuthenticationAgg.Models
             FullName = user.FullName,
             Mail = user.Mail,
             Password = user.Password,
+            SendAlerts = user.SendAlerts,
             RegistrationDate = user.RegistrationDate,
         };
 
         public ISpecification<User> Specification { get; }
     }
-
 }

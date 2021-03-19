@@ -1,0 +1,8 @@
+2021-03-18 20:46:29.0081 Info Message Template Auto Format enabled
+2021-03-18 20:46:29.3233 Info Loading assembly: NLog.Web.AspNetCore
+2021-03-18 20:46:29.6990 Info Adding target FileTarget(Name=allfile)
+2021-03-18 20:46:29.7328 Info Adding target FileTarget(Name=ownFile-web)
+2021-03-18 20:46:29.7905 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-03-18 20:46:30.0702 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=67, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-03-18 20:46:30.4424 Info Configuration initialized.
+2021-03-18 20:46:30.5244 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False

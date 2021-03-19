@@ -50,7 +50,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             dgClients.Columns[nameof(ClientModel.Phone)].HeaderText = "Telefone";
             dgClients.Columns[nameof(ClientModel.DateOfBirth)].HeaderText = "Data de nascimento";
             dgClients.Columns[nameof(ClientModel.DateOfBirth)].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgClients.Columns[nameof(ClientModel.ClinicalDiagnosis)].HeaderText = "Diagnostivo clínico"; 
+            dgClients.Columns[nameof(ClientModel.ClinicalDiagnosis)].HeaderText = "Diagnostivo clínico";
 
             this.SetLoading(false);
         }
@@ -126,15 +126,12 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
             if (e.KeyCode == Keys.Enter)
             {
                 SetData(txtFilter.Text);
-                txtFilter.Clear();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SetData(txtFilter.Text);
-
-            txtFilter.Clear();
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)

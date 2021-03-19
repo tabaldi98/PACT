@@ -4,6 +4,7 @@ using app.Tabaldi.PACT.App.Features.ClientsAgg;
 using app.Tabaldi.PACT.App.Features.ReportsAgg;
 using app.Tabaldi.PACT.LibraryModels.AuthenticationModule.Models;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace app.Tabaldi.PACT.App
@@ -20,7 +21,7 @@ namespace app.Tabaldi.PACT.App
 
             _profile = profile;
 
-            lblUser.Text = _profile.UserName;
+            lblUser.Text = _profile.FullName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +51,15 @@ namespace app.Tabaldi.PACT.App
         private void button3_Click(object sender, EventArgs e)
         {
             SetUserControlInPanel(new ReportsUserControl());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TokenHelper.SetToken(string.Empty);
+
+            Process.Start(Process.GetCurrentProcess().MainModule.FileName);
+
+            Application.Exit();
         }
     }
 }

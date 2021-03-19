@@ -3,6 +3,7 @@ using app.Tabaldi.PACT.Domain.Seedwork.Specification;
 using app.Tabaldi.PACT.Domain.UsersModule.UserAgg;
 using app.Tabaldi.PACT.Infra.Data.Context;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -13,6 +14,11 @@ namespace app.Tabaldi.PACT.Infra.Data.Repositories.UserAgg
         public UserRepository(IDatabaseContext context)
             : base(context)
         { }
+
+        public Task<List<User>> RetrieveAsync(ISpecification<User> specification = null, bool autoDetectChangesEnabled = false, params Expression<Func<User, object>>[] includeExpressions)
+        {
+            return GenericRepository.RetrieveAsync(specification, autoDetectChangesEnabled, includeExpressions);
+        }
 
         public Task<TResult> SingleOrDefaultAsync<TResult>(IHaveMapper<User, TResult> mapper)
         {

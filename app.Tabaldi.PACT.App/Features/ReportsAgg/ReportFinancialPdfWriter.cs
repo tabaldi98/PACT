@@ -1,4 +1,5 @@
-﻿using app.Tabaldi.PACT.LibraryModels.ReportsModule.Models;
+﻿using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
+using app.Tabaldi.PACT.LibraryModels.ReportsModule.Models;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
@@ -61,7 +62,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
             writer.Close();
             fileStream.Close();
         }
-      
+
         public static void WriteAttendanceReport(IEnumerable<ReportsAttendancesModel> reportsModel, string fileName)
         {
             var fileStream = new FileStream(fileName, FileMode.Create);
@@ -99,7 +100,93 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
             document.Add(table);
 
             document.Add(new Chunk(string.Empty));
-            
+
+            AddImageHeader(writer);
+
+            document.Close();
+            writer.Close();
+            fileStream.Close();
+        }
+
+        public static void WriteClientReport(ClientModel clientModel, string fileName)
+        {
+            var fileStream = new FileStream(fileName, FileMode.Create);
+
+            var document = new Document(PageSize.A4, 40, 40, 40, 40);
+
+            var writer = PdfWriter.GetInstance(document, fileStream);
+
+            document.Open();
+
+            document.Add(new Paragraph($"Relatório do paciente {clientModel.Name}", FontFactory.GetFont("Segoe UI", 25f, BaseColor.BLACK))
+            {
+                Alignment = 1,
+            });
+
+            document.Add(new Chunk(string.Empty));
+
+            document.Add(new Paragraph($"Data de nascimento: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.DateOfBirth.ToString("dd/MM/yyyy")}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"Telefone: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.Phone}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"Diagnóstico clínico: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.ClinicalDiagnosis}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"Diagnóstico fisioterapêutico: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.PhysiotherapeuticDiagnosis}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"Objetivos: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.Objectives}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"Conduta de tratamento: ", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.BOLD))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Paragraph($"- {clientModel.TreatmentConduct}", new Font(Font.FontFamily.TIMES_ROMAN, 15f, Font.UNDEFINED))
+            {
+                Alignment = 0,
+            });
+
+            document.Add(new Chunk(string.Empty));
+
             AddImageHeader(writer);
 
             document.Close();

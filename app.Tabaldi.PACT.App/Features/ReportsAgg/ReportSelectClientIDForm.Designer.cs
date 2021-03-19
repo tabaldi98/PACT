@@ -30,37 +30,81 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportSelectClientIDForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.endDate = new System.Windows.Forms.DateTimePicker();
+            this.startDate = new System.Windows.Forms.DateTimePicker();
+            this.checkAll = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgClients = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.groupFilterData = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgClients)).BeginInit();
+            this.groupFilterData.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtFilter);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(440, 74);
+            this.groupBox1.Size = new System.Drawing.Size(440, 65);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtro";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "De";
+            // 
+            // endDate
+            // 
+            this.endDate.Enabled = false;
+            this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endDate.Location = new System.Drawing.Point(114, 64);
+            this.endDate.Name = "endDate";
+            this.endDate.Size = new System.Drawing.Size(101, 20);
+            this.endDate.TabIndex = 8;
+            // 
+            // startDate
+            // 
+            this.startDate.Enabled = false;
+            this.startDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startDate.Location = new System.Drawing.Point(7, 64);
+            this.startDate.Name = "startDate";
+            this.startDate.Size = new System.Drawing.Size(101, 20);
+            this.startDate.TabIndex = 7;
+            // 
+            // checkAll
+            // 
+            this.checkAll.AutoSize = true;
+            this.checkAll.Location = new System.Drawing.Point(7, 22);
+            this.checkAll.Name = "checkAll";
+            this.checkAll.Size = new System.Drawing.Size(56, 17);
+            this.checkAll.TabIndex = 6;
+            this.checkAll.Text = "Todos";
+            this.checkAll.UseVisualStyleBackColor = true;
+            this.checkAll.CheckedChanged += new System.EventHandler(this.checkAll_CheckedChanged);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(409, 34);
+            this.button2.Location = new System.Drawing.Point(410, 23);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 19);
+            this.button2.Size = new System.Drawing.Size(25, 20);
             this.button2.TabIndex = 4;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
@@ -68,25 +112,16 @@
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(9, 33);
+            this.txtFilter.Location = new System.Drawing.Point(9, 24);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(394, 20);
             this.txtFilter.TabIndex = 1;
             this.txtFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Filtro";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgClients);
-            this.groupBox2.Location = new System.Drawing.Point(12, 83);
+            this.groupBox2.Location = new System.Drawing.Point(12, 68);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(440, 392);
             this.groupBox2.TabIndex = 1;
@@ -112,7 +147,7 @@
             // 
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(363, 481);
+            this.btnCancel.Location = new System.Drawing.Point(357, 468);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(89, 40);
             this.btnCancel.TabIndex = 29;
@@ -125,7 +160,7 @@
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOk.Location = new System.Drawing.Point(268, 481);
+            this.btnOk.Location = new System.Drawing.Point(262, 468);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(89, 40);
             this.btnOk.TabIndex = 30;
@@ -134,12 +169,36 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // groupFilterData
+            // 
+            this.groupFilterData.Controls.Add(this.label4);
+            this.groupFilterData.Controls.Add(this.label3);
+            this.groupFilterData.Controls.Add(this.checkAll);
+            this.groupFilterData.Controls.Add(this.endDate);
+            this.groupFilterData.Controls.Add(this.startDate);
+            this.groupFilterData.Location = new System.Drawing.Point(12, 466);
+            this.groupFilterData.Name = "groupFilterData";
+            this.groupFilterData.Size = new System.Drawing.Size(233, 94);
+            this.groupFilterData.TabIndex = 2;
+            this.groupFilterData.TabStop = false;
+            this.groupFilterData.Text = "Filtro por período de atendimentos";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(111, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Até";
+            // 
             // ReportSelectClientIDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 530);
+            this.ClientSize = new System.Drawing.Size(457, 566);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.groupFilterData);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -154,6 +213,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgClients)).EndInit();
+            this.groupFilterData.ResumeLayout(false);
+            this.groupFilterData.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -162,11 +223,16 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgClients;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker endDate;
+        private System.Windows.Forms.DateTimePicker startDate;
+        private System.Windows.Forms.CheckBox checkAll;
+        private System.Windows.Forms.GroupBox groupFilterData;
+        private System.Windows.Forms.Label label4;
     }
 }

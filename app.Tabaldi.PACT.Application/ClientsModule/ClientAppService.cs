@@ -1,10 +1,12 @@
-﻿using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
+﻿using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
+using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,14 +24,17 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
     public class ClientAppService : AppServiceBase<IClientRepository>, IClientAppService
     {
         private readonly IAttendanceRepository _attendanceRepository;
+        private readonly Lazy<IAuthenticatedUser> _authenticatedUser;
 
         public ClientAppService(
             IAttendanceRepository attendanceRepository,
             IClientRepository repository,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            Lazy<IAuthenticatedUser> authenticatedUser)
             : base(repository, unitOfWork)
         {
             _attendanceRepository = attendanceRepository;
+            _authenticatedUser = authenticatedUser;
         }
 
         public async Task<int> CreateAsync(ClientAddCommand command)
@@ -37,7 +42,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
             var exists = await Repository.AnyAsync(ClientSpecifications.RetrieveByName(command.Name));
             Guard.ObjectAlreadyExists<Client>(exists);
 
-            var client = new Client(command.Name, command.DateOfBirth, command.Phone, command.ClinicalDiagnosis, command.PhysiotherapeuticDiagnosis, command.TreatmentConduct, command.Objectives, command.ChargingType, command.Value);
+            var client = new Client(command.Name, command.DateOfBirth, command.Phone, command.ClinicalDiagnosis, command.PhysiotherapeuticDiagnosis, command.TreatmentConduct, command.Objectives, command.ChargingType, command.Value, _authenticatedUser.Value.User.ID);
 
             client.AddRecurrences(command.Recurrences.Select(p => new AttendanceRecurrence(p.WeekDay, p.StartTime, p.EndTime, client)));
 
@@ -70,7 +75,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
 
         public IQueryable<ClientModel> RetrieveAll()
         {
-            return Repository.RetrieveMapper(new ClientModelMapper());
+            return Repository.RetrieveMapper(new ClientModelMapper(ClientSpecifications.RetrieveByUserID(_authenticatedUser.Value.User.ID)));
         }
 
         public async Task<bool> UpdateAsync(ClientEditCommand command)

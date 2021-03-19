@@ -42,8 +42,6 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient.AuthenticationModule
 
                 var response = await httpClient.GetAsync($"{_userBaseAddress}/profile");
 
-                if (!response.IsSuccessStatusCode) { throw new Exception(await response.Content.ReadAsStringAsync()); }
-
                 return await response.Content.ReadAsAsync<ProfileModel>(); ;
             }
         }

@@ -7,7 +7,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
 {
     public interface IHttpClientBase
     {
-        Task<HttpResponseMessage> GetAsync(string url);
+        Task<HttpResponseMessage> GetAsync(string url, bool throwException = true);
         Task<HttpResponseMessage> PostAsync<T>(string url, T command);
     }
 
@@ -22,7 +22,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
             _token = System.Configuration.ConfigurationManager.AppSettings["Token"];
         }
 
-        public async Task<HttpResponseMessage> GetAsync(string url)
+        public async Task<HttpResponseMessage> GetAsync(string url, bool throwException = true)
         {
             using (var httpClient = new System.Net.Http.HttpClient())
             {
@@ -31,7 +31,7 @@ namespace app.Tabaldi.PACT.Infra.Data.HttpClient
 
                 var response = await httpClient.GetAsync(url);
 
-                if (!response.IsSuccessStatusCode) { throw new Exception(await response.Content.ReadAsStringAsync()); }
+                if (throwException && !response.IsSuccessStatusCode) { throw new Exception(await response.Content.ReadAsStringAsync()); }
 
                 return response;
             }

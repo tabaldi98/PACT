@@ -36,7 +36,7 @@ namespace app.Tabaldi.PACT.Application.AuthenticationAgg
         public async Task<bool> UpdateProfileAsync(ProfileCommand command)
         {
             var user = await Repository.SingleOrDefaultAsync(UserSpecification.RetrieveByID(_authenticatedUser.Value.User.ID), true);
-            user.SetData(command.UserName, command.Password, command.FullName, command.Mail);
+            user.SetData(command.UserName, command.Password, command.FullName, command.Mail, command.SendAlerts);
 
             return await CommitAsync();
         }

@@ -67,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthenticatedUser\IAuthenticatedUser.cs" />
+    <Compile Include="Emails\Email.cs" />
     <Compile Include="Exceptions\Guard.cs" />
     <Compile Include="Exceptions\IHaveHttpError.cs" />
     <Compile Include="Exceptions\ObjectAlreadyExistsException.cs" />
     <Compile Include="Exceptions\ObjectNotFoundException.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

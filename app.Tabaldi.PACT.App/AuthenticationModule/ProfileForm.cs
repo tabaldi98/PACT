@@ -5,6 +5,7 @@ using app.Tabaldi.PACT.LibraryModels.AuthenticationModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AuthenticationModule.Models;
 using Autofac;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -32,6 +33,7 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
             txtLogin.Text = _profile.UserName;
             txtMail.Text = _profile.Mail;
             txtPassword.Text = _profile.Password;
+            checkSendMail.Checked = _profile.SendAlerts;
 
             lblRegistrationDate.Text += _profile.RegistrationDate.ToString("dd/MM/yyyy HH:mm:ss");
         }
@@ -97,9 +99,12 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
                     Mail = txtMail.Text,
                     Password = txtPassword.Text,
                     UserName = txtLogin.Text,
+                    SendAlerts = checkSendMail.Checked,
                 };
 
                 await _userRepository.UpdateProfileAsync(command);
+
+                Process.Start(Process.GetCurrentProcess().MainModule.FileName);
 
                 Application.Exit();
             }

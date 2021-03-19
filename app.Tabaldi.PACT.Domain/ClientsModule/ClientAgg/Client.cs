@@ -1,6 +1,7 @@
 ﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.Seedwork;
+using app.Tabaldi.PACT.Domain.UsersModule.UserAgg;
 using System;
 using System.Collections.Generic;
 
@@ -18,6 +19,10 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         public string Objectives { get; set; }
         public string TreatmentConduct { get; set; }
         public DateTimeOffset RegistrationDate { get; set; }
+        public virtual int UserID { get; set; }
+
+        // FK
+        public virtual User User { get; set; }
 
         // Reverse Navigation
         private readonly List<AttendanceRecurrence> _recurrences;
@@ -33,9 +38,10 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
             RegistrationDate = DateTimeOffset.Now;
         }
 
-        public Client(string name, DateTime dateBirth, string phone, string clinicalDiagnosis, string physiotherapeuticDiagnosis, string treatmentConduct, string objective, ChargingType chargingType, decimal value)
+        public Client(string name, DateTime dateBirth, string phone, string clinicalDiagnosis, string physiotherapeuticDiagnosis, string treatmentConduct, string objective, ChargingType chargingType, decimal value, int userId)
             : this()
         {
+            UserID = userId;
             SetName(name);
             SetDiagnosis(clinicalDiagnosis, physiotherapeuticDiagnosis);
             SetDateOfBirth(dateBirth);

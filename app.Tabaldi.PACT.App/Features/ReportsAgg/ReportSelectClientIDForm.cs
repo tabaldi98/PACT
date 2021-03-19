@@ -2,6 +2,7 @@
 using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.ReportsModule.Commands;
 using Autofac;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,21 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
 {
     public partial class ReportSelectClientIDForm : Form
     {
-        public int ClientID { get; private set; }
+        public ReportClientIDFilterCommand Command { get; private set; }
 
         private readonly IClientClientRepository _clientClientRepository = AutofacConfig.Container.Value.Resolve<IClientClientRepository>();
 
-        public ReportSelectClientIDForm()
+        public ReportSelectClientIDForm(bool showDateFilter = true)
         {
             InitializeComponent();
 
             Enabled = true;
+
+            groupFilterData.Visible = showDateFilter;
+
+            var dtNow = DateTime.Now;
+            startDate.Value = new DateTime(dtNow.Year, dtNow.Month, 1);
+            endDate.Value = startDate.Value.AddMonths(1).AddDays(-1);
         }
 
         private async void SetData(string filter = null)
@@ -77,7 +84,14 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
                 return;
             }
 
-            ClientID = selecteds.SingleOrDefault().ID;
+            Command = new ReportClientIDFilterCommand()
+            {
+                ClientID = selecteds.SingleOrDefault().ID,
+                UseFilter = !checkAll.Checked,
+                EndDate = endDate.Value,
+                StartDate = startDate.Value,
+            };
+
             DialogResult = DialogResult.OK;
         }
 
@@ -97,6 +111,11 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
         private void ReportSelectClientIDForm_Load(object sender, EventArgs e)
         {
             SetData();
+        }
+
+        private void checkAll_CheckedChanged(object sender, EventArgs e)
+        {
+            startDate.Enabled = endDate.Enabled = !checkAll.Checked;
         }
     }
 }

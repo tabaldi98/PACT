@@ -41,11 +41,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.lblRegistrationDate = new System.Windows.Forms.Label();
+            this.checkSendMail = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkSendMail);
             this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.lblMail);
             this.groupBox1.Controls.Add(this.txtFullName);
@@ -56,7 +58,7 @@
             this.groupBox1.Controls.Add(this.lblLogin);
             this.groupBox1.Location = new System.Drawing.Point(5, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 198);
+            this.groupBox1.Size = new System.Drawing.Size(488, 225);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -129,7 +131,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(404, 206);
+            this.button2.Location = new System.Drawing.Point(404, 233);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 40);
             this.button2.TabIndex = 27;
@@ -142,7 +144,7 @@
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOk.Location = new System.Drawing.Point(309, 206);
+            this.btnOk.Location = new System.Drawing.Point(309, 233);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(89, 40);
             this.btnOk.TabIndex = 28;
@@ -154,17 +156,27 @@
             // lblRegistrationDate
             // 
             this.lblRegistrationDate.AutoSize = true;
-            this.lblRegistrationDate.Location = new System.Drawing.Point(12, 220);
+            this.lblRegistrationDate.Location = new System.Drawing.Point(12, 245);
             this.lblRegistrationDate.Name = "lblRegistrationDate";
-            this.lblRegistrationDate.Size = new System.Drawing.Size(75, 13);
+            this.lblRegistrationDate.Size = new System.Drawing.Size(78, 13);
             this.lblRegistrationDate.TabIndex = 8;
-            this.lblRegistrationDate.Text = "Registrado em";
+            this.lblRegistrationDate.Text = "Registrado em ";
+            // 
+            // checkSendMail
+            // 
+            this.checkSendMail.AutoSize = true;
+            this.checkSendMail.Location = new System.Drawing.Point(10, 193);
+            this.checkSendMail.Name = "checkSendMail";
+            this.checkSendMail.Size = new System.Drawing.Size(186, 17);
+            this.checkSendMail.TabIndex = 8;
+            this.checkSendMail.Text = "Receber avisos dos atendimentos";
+            this.checkSendMail.UseVisualStyleBackColor = true;
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 251);
+            this.ClientSize = new System.Drawing.Size(502, 283);
             this.Controls.Add(this.lblRegistrationDate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnOk);
@@ -197,5 +209,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblRegistrationDate;
+        private System.Windows.Forms.CheckBox checkSendMail;
     }
 }
