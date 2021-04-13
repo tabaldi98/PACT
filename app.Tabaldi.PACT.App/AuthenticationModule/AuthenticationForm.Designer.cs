@@ -36,12 +36,14 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkSaveCredentials = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkSaveCredentials);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.label2);
@@ -73,7 +75,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(443, 20);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "321";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
@@ -92,7 +93,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(443, 20);
             this.txtLogin.TabIndex = 1;
-            this.txtLogin.Text = "anderson.tabaldi";
             this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
             // 
@@ -114,6 +114,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // checkSaveCredentials
+            // 
+            this.checkSaveCredentials.AutoSize = true;
+            this.checkSaveCredentials.Location = new System.Drawing.Point(10, 108);
+            this.checkSaveCredentials.Name = "checkSaveCredentials";
+            this.checkSaveCredentials.Size = new System.Drawing.Size(149, 17);
+            this.checkSaveCredentials.TabIndex = 5;
+            this.checkSaveCredentials.Text = "Salvar minhas credenciais";
+            this.checkSaveCredentials.UseVisualStyleBackColor = true;
             // 
             // AuthenticationForm
             // 
@@ -145,5 +155,6 @@
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkSaveCredentials;
     }
 }

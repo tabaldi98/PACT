@@ -23,4 +23,20 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
             return string.IsNullOrEmpty(tokenAppSettings) ? _token : tokenAppSettings;
         }
     }
+
+    public static class ConfigHelper
+    {
+        public static void SetValue(string key, string value)
+        {
+            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings[key].Value = value;
+            configuration.Save(ConfigurationSaveMode.Modified);
+        }
+
+        public static string GetValue(string key, string defaultValue)
+        {
+            var value = ConfigurationManager.AppSettings[key];
+            return string.IsNullOrEmpty(value) ? defaultValue : value;
+        }
+    }
 }

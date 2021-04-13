@@ -23,11 +23,11 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
         {
             InitializeComponent();
 
-            //_clientRepository = new ClientClientRepository();
-
             SetListDaysData();
 
             SetClientData(clientModel);
+
+            txtName.Select();
         }
 
         #region Métodos privados

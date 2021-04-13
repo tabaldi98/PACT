@@ -19,6 +19,10 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
         public AuthenticationForm()
         {
             InitializeComponent();
+
+            checkSaveCredentials.Checked = Convert.ToBoolean(ConfigHelper.GetValue("SaveCredentials", bool.TrueString));
+            txtLogin.Text = ConfigHelper.GetValue("User", string.Empty);
+            txtPassword.Text = ConfigHelper.GetValue("Password", string.Empty);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +51,8 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
             try
             {
                 this.SetIsLoading();
+
+                HandleSaveCredentials();
 
                 var tokenResult = await _userRepository.AuthenticateAsync(new AuthenticateCommand()
                 {
@@ -110,6 +116,13 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
             var form2 = new Main(profileModel);
             form2.Closed += (s, args) => Close();
             form2.Show();
+        }
+
+        private void HandleSaveCredentials()
+        {
+            ConfigHelper.SetValue("SaveCredentials", checkSaveCredentials.Checked.ToString());
+            ConfigHelper.SetValue("User", checkSaveCredentials.Checked ? txtLogin.Text : string.Empty);
+            ConfigHelper.SetValue("Password", checkSaveCredentials.Checked ? txtPassword.Text : string.Empty);
         }
     }
 }

@@ -43,8 +43,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.lblUser);
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -58,8 +58,10 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(86, 419);
+            this.button4.Location = new System.Drawing.Point(86, 417);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(27, 28);
             this.button4.TabIndex = 4;
@@ -70,9 +72,11 @@
             // 
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(10, 400);
+            this.lblUser.Location = new System.Drawing.Point(1, 425);
+            this.lblUser.MaximumSize = new System.Drawing.Size(85, 13);
+            this.lblUser.MinimumSize = new System.Drawing.Size(85, 13);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(55, 13);
+            this.lblUser.Size = new System.Drawing.Size(85, 13);
             this.lblUser.TabIndex = 3;
             this.lblUser.TabStop = true;
             this.lblUser.Text = "linkLabel1";
