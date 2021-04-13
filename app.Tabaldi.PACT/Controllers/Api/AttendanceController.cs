@@ -1,6 +1,6 @@
 ﻿using app.Tabaldi.PACT.Application.AttendanceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;

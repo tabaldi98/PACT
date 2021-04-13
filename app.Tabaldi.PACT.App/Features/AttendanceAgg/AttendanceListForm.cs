@@ -1,8 +1,8 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

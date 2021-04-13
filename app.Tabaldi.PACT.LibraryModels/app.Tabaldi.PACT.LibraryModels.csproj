@@ -41,16 +41,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendanceModule\Commands\AttendanceAddCommand.cs" />
+    <Compile Include="AttendanceModule\Commands\AttendanceEditCommand.cs" />
+    <Compile Include="AttendanceModule\Commands\AttendanceRemoveCommand.cs" />
+    <Compile Include="AttendanceModule\Enums\ChargingType.cs" />
+    <Compile Include="AttendanceModule\Enums\ViewPeriodType.cs" />
+    <Compile Include="AttendanceModule\Models\AttendanceModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Commands\AttendanceRecurrenceCommand.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Enums\WeekDay.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendanceRecurrenceModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendancesCurrentDayModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendancesCurrentMonthModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendancesCurrentWeekModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendancesNextMonthModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\AttendancesPastMonthModel.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Models\IAttendancesModelBase.cs" />
     <Compile Include="AuthenticationModule\Commands\AuthenticateCommand.cs" />
     <Compile Include="AuthenticationModule\Commands\ProfileCommand.cs" />
     <Compile Include="AuthenticationModule\Enums\CustomClaimTypes.cs" />
     <Compile Include="AuthenticationModule\Models\JsonWebTokenModel.cs" />
     <Compile Include="AuthenticationModule\Models\ProfileModel.cs" />
+    <Compile Include="ClientsModule\Commands\ClientAddCommand.cs" />
+    <Compile Include="ClientsModule\Commands\ClientEditCommand.cs" />
+    <Compile Include="ClientsModule\Commands\ClientRemoveCommand.cs" />
+    <Compile Include="ClientsModule\Models\ClientModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportsModule\Commands\ReportClientIDFilterCommand.cs" />
     <Compile Include="ReportsModule\Commands\ReportsDefaultFilterCommand.cs" />
     <Compile Include="ReportsModule\Models\ReportsAttendancesModel.cs" />
     <Compile Include="ReportsModule\Models\ReportsFinancialModel.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

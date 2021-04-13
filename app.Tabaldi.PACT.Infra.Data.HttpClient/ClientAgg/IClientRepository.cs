@@ -1,9 +1,6 @@
-﻿using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
-using System;
+﻿using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 

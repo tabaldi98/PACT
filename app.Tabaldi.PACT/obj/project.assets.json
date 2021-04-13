@@ -2976,7 +2976,8 @@
       "app.Tabaldi.PACT.Domain/1.0.0": {
         "type": "project",
         "dependencies": {
-          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0"
+          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0",
+          "app.Tabaldi.PACT.LibraryModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/app.Tabaldi.PACT.Domain.dll": {}

@@ -1,4 +1,4 @@
-﻿using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
+﻿using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using app.Tabaldi.PACT.LibraryModels.ReportsModule.Models;
 using iTextSharp.text;
 using iTextSharp.text.pdf;

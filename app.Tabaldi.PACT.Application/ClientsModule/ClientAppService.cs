@@ -1,11 +1,12 @@
-﻿using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
+﻿using app.Tabaldi.PACT.Application.ClientsModule.Models;
+using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

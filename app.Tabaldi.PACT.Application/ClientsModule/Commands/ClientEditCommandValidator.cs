@@ -1,4 +1,4 @@
-﻿using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
+﻿using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
 using FluentValidation;
 
 namespace app.Tabaldi.PACT.Application.ClientsModule.Commands

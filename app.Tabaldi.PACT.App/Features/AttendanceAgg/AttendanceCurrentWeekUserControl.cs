@@ -1,9 +1,9 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
 using app.Tabaldi.PACT.App.Features.ClientsAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;

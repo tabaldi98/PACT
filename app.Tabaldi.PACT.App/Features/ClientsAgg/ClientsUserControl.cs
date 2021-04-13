@@ -1,13 +1,13 @@
-﻿using System;
+﻿using app.Tabaldi.PACT.App.Commom;
+using app.Tabaldi.PACT.App.Features.AttendanceAgg;
+using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using app.Tabaldi.PACT.App.Commom;
-using app.Tabaldi.PACT.App.Features.AttendanceAgg;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
-using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 
 namespace app.Tabaldi.PACT.App.Features.ClientsAgg
 {

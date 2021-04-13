@@ -1,4 +1,4 @@
-﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+﻿using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;

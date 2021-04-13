@@ -1,4 +1,4 @@
-﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
+﻿using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
 using FluentValidation;
 
 namespace app.Tabaldi.PACT.Application.AttendanceAgg.Commands

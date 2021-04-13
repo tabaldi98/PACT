@@ -1,7 +1,7 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
 using app.Tabaldi.PACT.App.DependencyResolution;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using app.Tabaldi.PACT.LibraryModels.ReportsModule.Commands;
 using Autofac;
 using System;

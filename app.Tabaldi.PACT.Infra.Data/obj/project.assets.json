@@ -2123,7 +2123,8 @@
       "app.Tabaldi.PACT.Domain/1.0.0": {
         "type": "project",
         "dependencies": {
-          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0"
+          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0",
+          "app.Tabaldi.PACT.LibraryModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/app.Tabaldi.PACT.Domain.dll": {}
@@ -2139,6 +2140,15 @@
         },
         "runtime": {
           "bin/placeholder/app.Tabaldi.PACT.Domain.Seedwork.dll": {}
+        }
+      },
+      "app.Tabaldi.PACT.LibraryModels/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/app.Tabaldi.PACT.LibraryModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/app.Tabaldi.PACT.LibraryModels.dll": {}
         }
       }
     }
@@ -7318,6 +7328,11 @@
       "type": "project",
       "path": "../app.Tabaldi.PACT.Domain.Seedwork/app.Tabaldi.PACT.Domain.Seedwork.csproj",
       "msbuildProject": "../app.Tabaldi.PACT.Domain.Seedwork/app.Tabaldi.PACT.Domain.Seedwork.csproj"
+    },
+    "app.Tabaldi.PACT.LibraryModels/1.0.0": {
+      "type": "project",
+      "path": "../app.Tabaldi.PACT.LibraryModels/app.Tabaldi.PACT.LibraryModels.csproj",
+      "msbuildProject": "../app.Tabaldi.PACT.LibraryModels/app.Tabaldi.PACT.LibraryModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

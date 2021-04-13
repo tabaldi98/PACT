@@ -1,6 +1,7 @@
-﻿using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
+﻿using app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg.Models;
+using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using System;
 using System.Linq;
 

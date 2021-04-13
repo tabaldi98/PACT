@@ -2,6 +2,7 @@
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.Seedwork;
 using app.Tabaldi.PACT.Domain.UsersModule.UserAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
 using System;
 using System.Collections.Generic;
 

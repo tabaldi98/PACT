@@ -1,5 +1,5 @@
-﻿using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
+﻿using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;

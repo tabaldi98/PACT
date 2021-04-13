@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
 
 namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 {

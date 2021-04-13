@@ -1,6 +1,7 @@
 ﻿using app.Tabaldi.PACT.Application.ReportsModule.Models;
 using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
 using app.Tabaldi.PACT.LibraryModels.ReportsModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.ReportsModule.Models;
 using System;

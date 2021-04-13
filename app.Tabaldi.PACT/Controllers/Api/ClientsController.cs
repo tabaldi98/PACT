@@ -1,6 +1,6 @@
 ﻿using app.Tabaldi.PACT.Application.ClientsModule;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;

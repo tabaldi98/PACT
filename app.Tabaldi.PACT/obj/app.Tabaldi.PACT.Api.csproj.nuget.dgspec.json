@@ -123,6 +123,9 @@
             "projectReferences": {
               "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj": {
                 "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.Domain.Seedwork\\app.Tabaldi.PACT.Domain.Seedwork.csproj"
+              },
+              "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj": {
+                "projectPath": "D:\\Documents off Disc C\\Anderson\\Area de trabalho\\Meus projetos\\PACT\\app.Tabaldi.PACT.LibraryModels\\app.Tabaldi.PACT.LibraryModels.csproj"
               }
             }
           }

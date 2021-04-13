@@ -1,18 +1,19 @@
-﻿using app.Tabaldi.PACT.Crosscutting.NetCore.Extensions;
+﻿using app.Tabaldi.PACT.Application.AttendanceAgg.Models;
+using app.Tabaldi.PACT.Crosscutting.NetCore.Emails;
 using app.Tabaldi.PACT.Crosscutting.NetCore.Exceptions;
+using app.Tabaldi.PACT.Crosscutting.NetCore.Extensions;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Commands;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.Seedwork.Contracts.UnitOfWork;
 using app.Tabaldi.PACT.Domain.UsersModule.UserAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Enums;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
-using app.Tabaldi.PACT.Crosscutting.NetCore.Emails;
 using System.Text;
-using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Application.AttendanceAgg
 {
@@ -23,7 +24,6 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
         Task<bool> RemoveAsync(AttendanceRemoveCommand command);
         Task<bool> UpdateAsync(AttendanceEditCommand command);
 
-        Task<string> ExecuteQueueAsync();
         Task<string> ExecuteAlertQueueAsync();
     }
 
@@ -78,33 +78,6 @@ namespace app.Tabaldi.PACT.Application.AttendanceAgg
             attendance.SetDescription(command.Description);
 
             return await CommitAsync();
-        }
-
-        public async Task<string> ExecuteQueueAsync()
-        {
-            //var clients = await _clientRepository.RetrieveAsync(null, false, p => p.Recurrences);
-
-            //foreach (var client in clients)
-            //{
-            //    foreach (var attendanceRecurrence in client.Recurrences)
-            //    {
-            //        var yesterday = DateTime.Now.AddDays(-1);
-
-            //        var attendanceExists = await Repository.AnyAsync(AttendanceSpecifications.RetrieveByClientIDAndDate(yesterday, client.ID));
-            //        if (attendanceExists) { continue; }
-
-            //        if (yesterday.DayOfWeek == (DayOfWeek)attendanceRecurrence.WeekDay)
-            //        {
-            //            var attendance = new Attendance(client.ID, yesterday, attendanceRecurrence.StartTime, attendanceRecurrence.EndTime, string.Empty);
-
-            //            Repository.Create(attendance);
-            //        }
-            //    }
-            //}
-
-            //await CommitAsync();
-
-            return bool.TrueString;
         }
 
         public async Task<string> ExecuteAlertQueueAsync()

@@ -1,6 +1,6 @@
 ﻿using app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg.Models;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Models;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;

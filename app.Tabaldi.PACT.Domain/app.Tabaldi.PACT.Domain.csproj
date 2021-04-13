@@ -43,33 +43,13 @@
   <ItemGroup>
     <Compile Include="AttendanceModule\AttendanceAgg\Attendance.cs" />
     <Compile Include="AttendanceModule\AttendanceAgg\AttendanceSpecifications.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceAddCommand.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceEditCommand.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\Commands\AttendanceRemoveCommand.cs" />
     <Compile Include="AttendanceModule\AttendanceAgg\IAttendanceRepository.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\Models\AttendanceModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendancesCurrentDayModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendancesNextMonthModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendancesPastMonthModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendancesCurrentMonthModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendancesCurrentWeekModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\IAttendancesModelBase.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\Models\ViewPeriodType.cs" />
-    <Compile Include="AttendanceModule\AttendanceAgg\ValueCharging.cs" />
     <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\AttendanceRecurrence.cs" />
     <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\IAttendanceRecurrenceRepository.cs" />
     <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\AttendanceRecurrenceSpecifications.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Commands\AttendanceRecurrenceAddCommand.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\Models\AttendanceRecurrenceModel.cs" />
-    <Compile Include="AttendanceModule\AttendanceRecurrenceAgg\WeekDay.cs" />
     <Compile Include="ClientsModule\ClientAgg\Client.cs" />
     <Compile Include="ClientsModule\ClientAgg\ClientSpecifications.cs" />
-    <Compile Include="ClientsModule\ClientAgg\Commands\ClientEditCommand.cs" />
-    <Compile Include="ClientsModule\ClientAgg\Commands\ClientAddCommand.cs" />
-    <Compile Include="ClientsModule\ClientAgg\Commands\ClientRemoveCommand.cs" />
-    <Compile Include="ClientsModule\ClientAgg\Commands\IClientCommandBase.cs" />
     <Compile Include="ClientsModule\ClientAgg\IClientRepository.cs" />
-    <Compile Include="ClientsModule\ClientAgg\Models\ClientModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersModule\UserAgg\IUserRepository.cs" />
     <Compile Include="UsersModule\UserAgg\User.cs" />
@@ -79,6 +59,10 @@
     <ProjectReference Include="..\app.Tabaldi.PACT.Domain.Seedwork\app.Tabaldi.PACT.Domain.Seedwork.csproj">
       <Project>{c7555ca5-d8d1-4bf1-9aef-52296fe1fbc4}</Project>
       <Name>app.Tabaldi.PACT.Domain.Seedwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\app.Tabaldi.PACT.LibraryModels\app.Tabaldi.PACT.LibraryModels.csproj">
+      <Project>{2F2EF1BA-5619-495C-BB92-501ACD44D4D8}</Project>
+      <Name>app.Tabaldi.PACT.LibraryModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

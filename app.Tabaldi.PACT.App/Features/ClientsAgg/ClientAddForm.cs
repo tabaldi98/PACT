@@ -1,11 +1,11 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
 using app.Tabaldi.PACT.App.DependencyResolution;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
-using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Commands;
-using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg.Models;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Enums;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands;
+using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
 using Autofac;
 using System;
 using System.Collections.Generic;

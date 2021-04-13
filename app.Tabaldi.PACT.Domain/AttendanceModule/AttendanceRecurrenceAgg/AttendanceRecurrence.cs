@@ -1,5 +1,6 @@
 ﻿using app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg;
 using app.Tabaldi.PACT.Domain.Seedwork;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Enums;
 using System;
 
 namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg
