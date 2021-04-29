@@ -73,7 +73,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
 
                     if (!report.Any())
                     {
-                        MessageBox.Show("Nenhum dado para este cliente");
+                        MessageBox.Show("Nenhum dado para este paciente");
                         return;
                     }
 
@@ -91,7 +91,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
                         Process.Start(saveFileDialog.FileName);
                     }
                 }
-                catch (Exception ex)
+                catch
                 { }
                 finally
                 {

@@ -18,6 +18,7 @@ namespace app.Tabaldi.PACT.LibraryModels.ClientsModule.Models
         public string Objectives { get; set; }
         public string TreatmentConduct { get; set; }
         public IEnumerable<AttendanceRecurrenceModel> Recurrences { get; set; }
+        public bool Enabled { get; set; }
         public DateTimeOffset RegistrationDate { get; set; }
     }
 }

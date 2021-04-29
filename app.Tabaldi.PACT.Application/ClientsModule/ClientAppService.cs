@@ -90,6 +90,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
             client.SetObjective(command.Objectives);
             client.SetCosts(command.Value, command.ChargingType);
             client.SetTreatmentConduct(command.TreatmentConduct);
+            client.SetEnabled(command.Enabled);
 
             client.Recurrences.Clear();
             client.AddRecurrences(command.Recurrences.Select(p => new AttendanceRecurrence(p.WeekDay, p.StartTime, p.EndTime, client)));

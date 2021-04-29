@@ -82,6 +82,7 @@
             this.lblObjective = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.checkEnabled = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             // txtName
             // 
+            this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtName.Location = new System.Drawing.Point(13, 32);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 20);
@@ -185,6 +187,7 @@
             this.listDaysAttendance.Name = "listDaysAttendance";
             this.listDaysAttendance.Size = new System.Drawing.Size(451, 214);
             this.listDaysAttendance.TabIndex = 19;
+            this.listDaysAttendance.SelectedIndexChanged += new System.EventHandler(this.listDaysAttendance_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -632,6 +635,7 @@
             this.button2.Text = "Cancelar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOk
             // 
@@ -644,12 +648,25 @@
             this.btnOk.Text = "Ok";
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // checkEnabled
+            // 
+            this.checkEnabled.AutoSize = true;
+            this.checkEnabled.Location = new System.Drawing.Point(18, 614);
+            this.checkEnabled.Name = "checkEnabled";
+            this.checkEnabled.Size = new System.Drawing.Size(73, 17);
+            this.checkEnabled.TabIndex = 41;
+            this.checkEnabled.Text = "Habilitado";
+            this.checkEnabled.UseVisualStyleBackColor = true;
+            this.checkEnabled.Visible = false;
             // 
             // ClientAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 652);
+            this.Controls.Add(this.checkEnabled);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox3);
@@ -675,6 +692,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -732,5 +750,6 @@
         private System.Windows.Forms.RichTextBox txtDiagnosisClinical;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.CheckBox checkEnabled;
     }
 }

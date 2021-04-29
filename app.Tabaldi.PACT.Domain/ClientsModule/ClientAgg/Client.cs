@@ -19,6 +19,7 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         public string PhysiotherapeuticDiagnosis { get; set; }
         public string Objectives { get; set; }
         public string TreatmentConduct { get; set; }
+        public bool Enabled { get; set; }
         public DateTimeOffset RegistrationDate { get; set; }
         public virtual int UserID { get; set; }
 
@@ -36,6 +37,7 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         {
             _attendances = new List<Attendance>();
             _recurrences = new List<AttendanceRecurrence>();
+            Enabled = true;
             RegistrationDate = DateTimeOffset.Now;
         }
 
@@ -97,6 +99,11 @@ namespace app.Tabaldi.PACT.Domain.ClientsModule.ClientAgg
         public void AddRecurrences(IEnumerable<AttendanceRecurrence> attendancesRecurrences)
         {
             _recurrences.AddRange(attendancesRecurrences);
+        }
+
+        public void SetEnabled(bool enabled)
+        {
+            Enabled = enabled;
         }
     }
 }

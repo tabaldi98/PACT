@@ -78,7 +78,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
             }
 
 
-            dgAttendances.Columns[nameof(AttendancesCurrentMonthModel.ClientName)].HeaderText = "Cliente";
+            dgAttendances.Columns[nameof(AttendancesCurrentMonthModel.ClientName)].HeaderText = "Paciente";
             dgAttendances.Columns[nameof(AttendancesCurrentMonthModel.DayOffWeekAttendance)].HeaderText = "Data do atendimento";
             dgAttendances.Columns[nameof(AttendancesCurrentMonthModel.DayOffWeekAttendance)].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgAttendances.Columns[nameof(AttendancesCurrentMonthModel.DayOfAttendance)].HeaderText = "Dia da semana";

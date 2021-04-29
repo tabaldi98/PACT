@@ -17,6 +17,7 @@ namespace app.Tabaldi.PACT.LibraryModels.ClientsModule.Commands
         public string PhysiotherapeuticDiagnosis { get; set; }
         public string Objectives { get; set; }
         public string TreatmentConduct { get; set; }
+        public bool Enabled { get; set; }
         public IEnumerable<AttendanceRecurrenceCommand> Recurrences { get; set; }
     }
 }

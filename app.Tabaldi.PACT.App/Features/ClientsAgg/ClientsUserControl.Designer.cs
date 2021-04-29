@@ -38,6 +38,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.checkShowEnabled = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClients)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -55,7 +56,7 @@
             this.dgClients.Location = new System.Drawing.Point(3, 36);
             this.dgClients.Name = "dgClients";
             this.dgClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgClients.Size = new System.Drawing.Size(754, 483);
+            this.dgClients.Size = new System.Drawing.Size(1088, 483);
             this.dgClients.TabIndex = 0;
             this.dgClients.SelectionChanged += new System.EventHandler(this.dgClients_SelectionChanged);
             this.dgClients.DoubleClick += new System.EventHandler(this.dgClients_DoubleClick);
@@ -64,13 +65,14 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.checkShowEnabled);
             this.groupBox1.Controls.Add(this.btnAttendance);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(368, -5);
+            this.groupBox1.Location = new System.Drawing.Point(562, -5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 39);
+            this.groupBox1.Size = new System.Drawing.Size(529, 39);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -79,7 +81,7 @@
             this.btnAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAttendance.Image = ((System.Drawing.Image)(resources.GetObject("btnAttendance.Image")));
             this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAttendance.Location = new System.Drawing.Point(15, 10);
+            this.btnAttendance.Location = new System.Drawing.Point(155, 10);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(97, 23);
             this.btnAttendance.TabIndex = 3;
@@ -93,7 +95,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(125, 10);
+            this.button3.Location = new System.Drawing.Point(265, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -108,7 +110,7 @@
             this.btnEdit.Enabled = false;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.Location = new System.Drawing.Point(217, 10);
+            this.btnEdit.Location = new System.Drawing.Point(357, 10);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 1;
@@ -122,7 +124,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(308, 10);
+            this.button1.Location = new System.Drawing.Point(448, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -139,7 +141,7 @@
             this.groupBox2.Controls.Add(this.txtFilter);
             this.groupBox2.Location = new System.Drawing.Point(3, -5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 39);
+            this.groupBox2.Size = new System.Drawing.Size(344, 39);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -166,6 +168,21 @@
             this.txtFilter.TabIndex = 0;
             this.txtFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
+            // checkShowEnabled
+            // 
+            this.checkShowEnabled.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkShowEnabled.AutoSize = true;
+            this.checkShowEnabled.Checked = true;
+            this.checkShowEnabled.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkShowEnabled.Location = new System.Drawing.Point(6, 16);
+            this.checkShowEnabled.Name = "checkShowEnabled";
+            this.checkShowEnabled.Size = new System.Drawing.Size(142, 17);
+            this.checkShowEnabled.TabIndex = 4;
+            this.checkShowEnabled.Text = "Exibir apenas habilitados";
+            this.checkShowEnabled.UseVisualStyleBackColor = true;
+            this.checkShowEnabled.CheckedChanged += new System.EventHandler(this.checkShowEnabled_CheckedChanged);
+            // 
             // ClientsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,9 +192,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgClients);
             this.Name = "ClientsUserControl";
-            this.Size = new System.Drawing.Size(760, 528);
+            this.Size = new System.Drawing.Size(1094, 528);
             ((System.ComponentModel.ISupportInitialize)(this.dgClients)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -195,5 +213,6 @@
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAttendance;
+        private System.Windows.Forms.CheckBox checkShowEnabled;
     }
 }

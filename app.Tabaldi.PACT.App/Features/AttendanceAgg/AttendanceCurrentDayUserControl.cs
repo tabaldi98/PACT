@@ -1,9 +1,11 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
+using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.App.Features.ClientsAgg;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
 using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
+using Autofac;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,8 +14,8 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 {
     public partial class AttendanceCurrentDayUserControl : UserControl
     {
-        private readonly IAttendanceRecurrenceRepository _attendanceRepository;
-        private readonly IClientClientRepository _clientRepository;
+        private readonly IAttendanceRecurrenceRepository _attendanceRepository = AutofacConfig.Container.Value.Resolve<IAttendanceRecurrenceRepository>();
+        private readonly IClientClientRepository _clientRepository = AutofacConfig.Container.Value.Resolve<IClientClientRepository>();
 
         public AttendanceCurrentDayUserControl()
         {
@@ -21,9 +23,6 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 
             dgAttendances.AutoGenerateColumns = true;
             dgAttendances.ReadOnly = true;
-
-            _attendanceRepository = new AttendanceRecurrenceRepository();
-            _clientRepository = new ClientClientRepository();
 
             SetData();
         }

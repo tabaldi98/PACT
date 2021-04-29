@@ -215,7 +215,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
 
         private static void AddImageHeader(PdfWriter writer)
         {
-            var image = Image.GetInstance(@"Properties\\fundo_branco.icon.jpeg");
+            var image = Image.GetInstance(@"Properties\\relatorio.jpeg");
             image.SetAbsolutePosition(0, 0);
             image.ScaleAbsolute(200, 50);
             var directContent = writer.DirectContent;

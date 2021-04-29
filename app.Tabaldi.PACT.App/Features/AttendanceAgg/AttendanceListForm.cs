@@ -1,8 +1,10 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
+using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
 using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
+using Autofac;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +15,14 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
     public partial class AttendanceListForm : Form
     {
         private readonly ClientModel _clientModel;
-        private readonly IAttendanceRepository _attendanceRepository;
+
+        private readonly IAttendanceRepository _attendanceRepository = AutofacConfig.Container.Value.Resolve<IAttendanceRepository>();
 
         public AttendanceListForm(ClientModel clientModel)
         {
             InitializeComponent();
 
             _clientModel = clientModel;
-            _attendanceRepository = new AttendanceRepository();
         }
 
         private async void SetData(int? month = null)

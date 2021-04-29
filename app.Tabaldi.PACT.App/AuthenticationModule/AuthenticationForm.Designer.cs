@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthenticationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkSaveCredentials = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkSaveCredentials = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,16 @@
             this.groupBox1.Size = new System.Drawing.Size(462, 135);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // checkSaveCredentials
+            // 
+            this.checkSaveCredentials.AutoSize = true;
+            this.checkSaveCredentials.Location = new System.Drawing.Point(10, 108);
+            this.checkSaveCredentials.Name = "checkSaveCredentials";
+            this.checkSaveCredentials.Size = new System.Drawing.Size(149, 17);
+            this.checkSaveCredentials.TabIndex = 5;
+            this.checkSaveCredentials.Text = "Salvar minhas credenciais";
+            this.checkSaveCredentials.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -107,23 +117,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(5, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(462, 214);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // checkSaveCredentials
-            // 
-            this.checkSaveCredentials.AutoSize = true;
-            this.checkSaveCredentials.Location = new System.Drawing.Point(10, 108);
-            this.checkSaveCredentials.Name = "checkSaveCredentials";
-            this.checkSaveCredentials.Size = new System.Drawing.Size(149, 17);
-            this.checkSaveCredentials.TabIndex = 5;
-            this.checkSaveCredentials.Text = "Salvar minhas credenciais";
-            this.checkSaveCredentials.UseVisualStyleBackColor = true;
             // 
             // AuthenticationForm
             // 

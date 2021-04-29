@@ -1,4 +1,5 @@
-﻿using System;
+﻿using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Enums;
+using System;
 
 namespace app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models
 {
@@ -7,6 +8,7 @@ namespace app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models
         public int ClientID { get; set; }
         public string ClientName { get; set; }
         public string DayOfAttendance { get; set; }
+        public WeekDay WeekDay { get; set; }
         public DateTime StartAttendance { get; set; }
         public DateTime EndAttendance { get; set; }
     }

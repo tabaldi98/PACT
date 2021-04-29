@@ -21,6 +21,7 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg.Models
             ClientName = p.Client.Name,
             StartAttendance = p.StartTime,
             EndAttendance = p.EndTime,
+            WeekDay = p.WeekDay,
             DayOfAttendance =
                 p.WeekDay == WeekDay.Monday ? "Segunda-feira" :
                 p.WeekDay == WeekDay.Tuesday ? "Terça-feira" :

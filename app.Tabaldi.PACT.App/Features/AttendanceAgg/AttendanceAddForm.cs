@@ -1,8 +1,10 @@
 ﻿using app.Tabaldi.PACT.App.Commom;
+using app.Tabaldi.PACT.App.DependencyResolution;
 using app.Tabaldi.PACT.Infra.Data.HttpClient.ClientAgg;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Models;
 using app.Tabaldi.PACT.LibraryModels.ClientsModule.Models;
+using Autofac;
 using System;
 using System.Windows.Forms;
 
@@ -10,7 +12,7 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
 {
     public partial class AttendanceAddForm : Form
     {
-        private readonly IAttendanceRepository _attendanceRepository;
+        private readonly IAttendanceRepository _attendanceRepository = AutofacConfig.Container.Value.Resolve<IAttendanceRepository>();
         private readonly ClientModel _clientModel;
         private readonly AttendanceModel _attendanceModel;
 
@@ -18,7 +20,6 @@ namespace app.Tabaldi.PACT.App.Features.AttendanceAgg
         {
             InitializeComponent();
 
-            _attendanceRepository = new AttendanceRepository();
             _clientModel = clientModel;
             _attendanceModel = attendanceModel;
         }

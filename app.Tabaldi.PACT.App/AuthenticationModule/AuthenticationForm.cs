@@ -7,6 +7,7 @@ using app.Tabaldi.PACT.LibraryModels.AuthenticationModule.Models;
 using Autofac;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace app.Tabaldi.PACT.App.AuthenticationModule
@@ -23,6 +24,9 @@ namespace app.Tabaldi.PACT.App.AuthenticationModule
             checkSaveCredentials.Checked = Convert.ToBoolean(ConfigHelper.GetValue("SaveCredentials", bool.TrueString));
             txtLogin.Text = ConfigHelper.GetValue("User", string.Empty);
             txtPassword.Text = ConfigHelper.GetValue("Password", string.Empty);
+
+            pictureBox1.Image = Image.FromFile("Properties\\autenticacao.jpeg");
+            pictureBox1.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)

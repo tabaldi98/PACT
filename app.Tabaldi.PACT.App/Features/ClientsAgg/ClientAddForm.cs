@@ -54,6 +54,10 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
         {
             if (clientModel != null)
             {
+                Text = $"Atualizar paciente {clientModel.Name}";
+                checkEnabled.Visible = true;
+                checkEnabled.Checked = clientModel.Enabled;
+
                 txtName.Text = clientModel.Name;
                 txtPhone.Text = clientModel.Phone;
                 txtDiagnosisClinical.Text = clientModel.ClinicalDiagnosis;
@@ -117,6 +121,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
                 dtEndSunday.Value = sundayEnabled ? sundayRecurrence.EndTime : dtEndSunday.Value;
             }
         }
+      
         private bool ValidateAllFields()
         {
             if (txtName.IsNullOrEmpty())
@@ -189,6 +194,7 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
                 ChargingType = dayType.Checked ? ChargingType.Day : ChargingType.Month,
                 Value = txtValue.Value,
                 Recurrences = GetRecurrenceCommand(),
+                Enabled = checkEnabled.Checked,
             };
         }
 
@@ -244,12 +250,12 @@ namespace app.Tabaldi.PACT.App.Features.ClientsAgg
                 if (_id.HasValue)
                 {
                     await _clientRepository.UpdateAsync(GetEditCommand());
-                    MessageBoxExtensions.ShowSucessMessage("Cliente atualizado com sucesso");
+                    MessageBoxExtensions.ShowSucessMessage("Paciente atualizado com sucesso");
                 }
                 else
                 {
                     await _clientRepository.CreateAsync(GetAddCommand());
-                    MessageBoxExtensions.ShowSucessMessage("Cliente adicionado com sucesso");
+                    MessageBoxExtensions.ShowSucessMessage("Paciente adicionado com sucesso");
                 }
 
                 Close();

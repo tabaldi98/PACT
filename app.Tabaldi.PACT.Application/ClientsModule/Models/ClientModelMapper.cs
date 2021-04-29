@@ -29,6 +29,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule.Models
             TreatmentConduct = client.TreatmentConduct,
             ChargingType = client.ChargingType,
             Value = client.Value,
+            Enabled = client.Enabled,
             Recurrences = client.Recurrences.Select(p => new AttendanceRecurrenceModel()
             {
                 ID = p.ID,
