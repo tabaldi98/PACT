@@ -7,7 +7,7 @@ namespace app.Tabaldi.PACT.App.Commom
 {
     public static class MessageBoxExtensions
     {
-        private static string _title = "Dr. Patricia Caroline";
+        private static string _title = "FISIOTECH";
 
         public static void ShowSucessMessage(string message)
         {

@@ -35,7 +35,6 @@ namespace app.Tabaldi.PACT.Api.Extensions
 
         public static void AddRecurringJobs(this IApplicationBuilder app)
         {
-            //RecurringJob.AddOrUpdate<IAttendanceAppService>("execute-recurrence-attendance", p => p.ExecuteQueueAsync(), Cron.Daily(23));
             RecurringJob.AddOrUpdate<IAttendanceAppService>("execute-recurrence-alert", p => p.ExecuteAlertQueueAsync(), Cron.MinuteInterval(15));
         }
     }

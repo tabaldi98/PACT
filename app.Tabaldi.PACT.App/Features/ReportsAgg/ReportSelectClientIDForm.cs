@@ -53,6 +53,7 @@ namespace app.Tabaldi.PACT.App.Features.ReportsAgg
             dgClients.Columns[nameof(ClientModel.Objectives)].Visible = false;
             dgClients.Columns[nameof(ClientModel.TreatmentConduct)].Visible = false;
             dgClients.Columns[nameof(ClientModel.ClinicalDiagnosis)].Visible = false;
+            dgClients.Columns[nameof(ClientModel.Enabled)].Visible = false;
 
             dgClients.Columns[nameof(ClientModel.Name)].HeaderText = "Nome";
             dgClients.Columns[nameof(ClientModel.Phone)].HeaderText = "Telefone";

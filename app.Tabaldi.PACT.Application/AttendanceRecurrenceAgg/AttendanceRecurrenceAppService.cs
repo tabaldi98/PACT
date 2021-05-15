@@ -33,14 +33,7 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
 
         public IQueryable<AttendancesCurrentMonthModel> GetCurrentMonthAttendances()
         {
-            var data = Repository.RetrieveMapper(new AttendancesCurrentMonthModelMapper());
-
-            //data = data.Select(p => new AttendancesCurrentMonthModel()
-            //{
-
-            //});
-
-            return data;
+            return Repository.RetrieveMapper(new AttendancesCurrentMonthModelMapper());
         }
 
         public IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances()
