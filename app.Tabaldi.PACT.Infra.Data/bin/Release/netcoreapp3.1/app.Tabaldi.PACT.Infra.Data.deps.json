@@ -1380,7 +1380,8 @@
       },
       "app.Tabaldi.PACT.Domain/1.0.0": {
         "dependencies": {
-          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0"
+          "app.Tabaldi.PACT.Domain.Seedwork": "1.0.0",
+          "app.Tabaldi.PACT.LibraryModels": "1.0.0"
         },
         "runtime": {
           "app.Tabaldi.PACT.Domain.dll": {}
@@ -1389,6 +1390,11 @@
       "app.Tabaldi.PACT.Domain.Seedwork/1.0.0": {
         "runtime": {
           "app.Tabaldi.PACT.Domain.Seedwork.dll": {}
+        }
+      },
+      "app.Tabaldi.PACT.LibraryModels/1.0.0": {
+        "runtime": {
+          "app.Tabaldi.PACT.LibraryModels.dll": {}
         }
       }
     }
@@ -2336,6 +2342,11 @@
       "sha512": ""
     },
     "app.Tabaldi.PACT.Domain.Seedwork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "app.Tabaldi.PACT.LibraryModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

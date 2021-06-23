@@ -13,6 +13,11 @@ namespace app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg
             return new DirectSpecification<AttendanceRecurrence>(p => p.Client.UserID == userId && p.WeekDay == weekDay);
         }
 
+        public static ISpecification<AttendanceRecurrence> RetrieveAttendanceByWeekDay(int userId, DayOfWeek weekDay)
+        {
+            return new DirectSpecification<AttendanceRecurrence>(p => p.Client.UserID == userId && p.WeekDay == (WeekDay)weekDay);
+        }
+
         public static ISpecification<AttendanceRecurrence> RetrieveByUserID(int userId)
         {
             return new DirectSpecification<AttendanceRecurrence>(p => p.Client.UserID == userId);

@@ -14,3 +14,5 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.csproj.CopyComplete
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\obj\Release\app.Tabaldi.PACT.Domain.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.LibraryModels.dll
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain\bin\Release\app.Tabaldi.PACT.LibraryModels.pdb

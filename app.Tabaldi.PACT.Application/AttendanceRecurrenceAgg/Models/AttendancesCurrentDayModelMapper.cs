@@ -9,9 +9,11 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg.Models
 {
     public class AttendancesCurrentDayModelMapper : IHaveMapper<AttendanceRecurrence, AttendancesCurrentDayModel>
     {
-        public AttendancesCurrentDayModelMapper(int userId)
+        public AttendancesCurrentDayModelMapper(int userId, DayOfWeek? weekDay = null)
         {
-            Specification = AttendanceRecurrenceSpecifications.RetrieveAttendanceToCurrentDay(userId);
+            Specification = weekDay == null 
+                ? AttendanceRecurrenceSpecifications.RetrieveAttendanceToCurrentDay(userId)
+                : AttendanceRecurrenceSpecifications.RetrieveAttendanceByWeekDay(userId, weekDay.Value);
         }
 
         public Expression<Func<AttendanceRecurrence, AttendancesCurrentDayModel>> Selector => p => new AttendancesCurrentDayModel()

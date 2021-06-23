@@ -76,7 +76,7 @@ namespace app.Tabaldi.PACT.Application.ClientsModule
 
         public IQueryable<ClientModel> RetrieveAll()
         {
-            return Repository.RetrieveMapper(new ClientModelMapper(ClientSpecifications.RetrieveByUserID(_authenticatedUser.Value.User.ID)));
+            return Repository.RetrieveMapper(new ClientModelMapper(ClientSpecifications.RetrieveByUserID(_authenticatedUser.Value.User.ID))).OrderBy(p => p.Enabled).OrderBy(p => p.RegistrationDate).OrderBy(p => p.Name);
         }
 
         public async Task<bool> UpdateAsync(ClientEditCommand command)

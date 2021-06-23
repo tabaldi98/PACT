@@ -1,5 +1,6 @@
 ﻿using app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg;
 using app.Tabaldi.PACT.LibraryModels.AttendanceModule.Enums;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +30,13 @@ namespace app.Tabaldi.PACT.Api.Controllers.Api
                 ViewPeriodType.CurrentWeek => _attendanceAppService.GetCurrentWeekAttendances(),
                 _ => null,
             };
+        }
+
+        [HttpPost]
+        [Route("by-date")]
+        public IQueryable<IAttendancesModelBase> RetrieveAttendancesByDate(AttendancesByDateCommand command)
+        {
+            return _attendanceAppService.RetrieveAttendancesByDate(command);
         }
     }
 

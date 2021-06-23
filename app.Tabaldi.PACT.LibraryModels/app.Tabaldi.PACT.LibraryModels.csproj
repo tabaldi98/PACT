@@ -48,6 +48,7 @@
     <Compile Include="AttendanceModule\Enums\ViewPeriodType.cs" />
     <Compile Include="AttendanceModule\Models\AttendanceModel.cs" />
     <Compile Include="AttendanceRecurrenceModule\Commands\AttendanceRecurrenceCommand.cs" />
+    <Compile Include="AttendanceRecurrenceModule\Commands\AttendancesByDateCommand.cs" />
     <Compile Include="AttendanceRecurrenceModule\Enums\WeekDay.cs" />
     <Compile Include="AttendanceRecurrenceModule\Models\AttendanceRecurrenceModel.cs" />
     <Compile Include="AttendanceRecurrenceModule\Models\AttendancesCurrentDayModel.cs" />

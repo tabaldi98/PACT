@@ -13,3 +13,4 @@ D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain.Seedwork\bin\Debug\app.Tabaldi.PACT.Domain.Seedwork.pdb
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain.Seedwork\obj\Debug\app.Tabaldi.PACT.Domain.Seedwork.dll
 D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain.Seedwork\obj\Debug\app.Tabaldi.PACT.Domain.Seedwork.pdb
+D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT.Domain.Seedwork\obj\Debug\app.Tabaldi.PACT.Domain.Seedwork.csprojAssemblyReference.cache

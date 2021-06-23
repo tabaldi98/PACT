@@ -1,6 +1,7 @@
 ﻿using app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg.Models;
 using app.Tabaldi.PACT.Crosscutting.NetCore.AuthenticatedUser;
 using app.Tabaldi.PACT.Domain.AttendanceModule.AttendanceRecurrenceAgg;
+using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using System;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
         IQueryable<AttendancesCurrentDayModel> GetCurrentDayAttendances();
         IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances();
         IQueryable<AttendancesCurrentMonthModel> GetCurrentMonthAttendances();
+        IQueryable<IAttendancesModelBase> RetrieveAttendancesByDate(AttendancesByDateCommand command);
     }
 
     public class AttendanceRecurrenceAppService : AppServiceBase<IAttendanceRecurrenceRepository>, IAttendanceRecurrenceAppService
@@ -39,6 +41,11 @@ namespace app.Tabaldi.PACT.Application.AttendanceRecurrenceAgg
         public IQueryable<AttendancesCurrentWeekModel> GetCurrentWeekAttendances()
         {
             return Repository.RetrieveMapper(new AttendancesCurrentWeekModelMapper(_authenticatedUser.Value.User.ID));
+        }
+
+        public IQueryable<IAttendancesModelBase> RetrieveAttendancesByDate(AttendancesByDateCommand command)
+        {
+            return Repository.RetrieveMapper(new AttendancesCurrentDayModelMapper(_authenticatedUser.Value.User.ID, command.DateFilter.DayOfWeek));
         }
     }
 }

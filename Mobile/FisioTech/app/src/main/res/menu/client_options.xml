@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/client_act_attendances"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="@string/txt_attendances"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/client_act_ok"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@android:string/ok"
+        app:showAsAction="ifRoom"/>
+</menu>
