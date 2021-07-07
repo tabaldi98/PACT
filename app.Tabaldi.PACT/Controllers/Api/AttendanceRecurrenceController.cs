@@ -4,7 +4,9 @@ using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Commands;
 using app.Tabaldi.PACT.LibraryModels.AttendanceRecurrenceModule.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace app.Tabaldi.PACT.Api.Controllers.Api
 {
@@ -38,6 +40,12 @@ namespace app.Tabaldi.PACT.Api.Controllers.Api
         {
             return _attendanceAppService.RetrieveAttendancesByDate(command);
         }
-    }
 
+        [HttpGet]
+        [Route("alerts")]
+        public async Task<IEnumerable<AttendancesCurrentDayModel>> RetrieveAttendancesAlertsAsync()
+        {
+            return await _attendanceAppService.RetrieveAttendancesAlertsAsync();
+        }
+    }
 }

@@ -18,5 +18,10 @@ namespace app.Tabaldi.PACT.Domain.UsersModule.UserAgg
         {
             return new DirectSpecification<User>(p => p.SendAlerts);
         }
+
+        public static ISpecification<User> RetrieveUserByIdAndAlertsEnabled(int id)
+        {
+            return new DirectSpecification<User>(p => p.ID == id && p.SendAlerts);
+        }
     }
 }

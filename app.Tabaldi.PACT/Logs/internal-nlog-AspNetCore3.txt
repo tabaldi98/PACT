@@ -55,3 +55,59 @@
 2021-06-21 18:32:21.2396 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
 2021-06-21 18:32:21.2886 Info Configuration initialized.
 2021-06-21 18:32:21.2961 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-06-23 17:13:24.7363 Info Message Template Auto Format enabled
+2021-06-23 17:13:24.8435 Info Loading assembly: NLog.Web.AspNetCore
+2021-06-23 17:13:24.9251 Info Adding target FileTarget(Name=allfile)
+2021-06-23 17:13:24.9517 Info Adding target FileTarget(Name=ownFile-web)
+2021-06-23 17:13:24.9517 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-06-23 17:13:25.0073 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-06-23 17:13:25.0595 Info Configuration initialized.
+2021-06-23 17:13:25.0595 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-06-23 17:15:17.6005 Info Message Template Auto Format enabled
+2021-06-23 17:15:17.6500 Info Loading assembly: NLog.Web.AspNetCore
+2021-06-23 17:15:17.7572 Info Adding target FileTarget(Name=allfile)
+2021-06-23 17:15:17.7572 Info Adding target FileTarget(Name=ownFile-web)
+2021-06-23 17:15:17.7646 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-06-23 17:15:17.8084 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-06-23 17:15:17.8388 Info Configuration initialized.
+2021-06-23 17:15:17.8388 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-07-01 11:13:12.8880 Info Message Template Auto Format enabled
+2021-07-01 11:13:13.1821 Info Loading assembly: NLog.Web.AspNetCore
+2021-07-01 11:13:13.3227 Info Adding target FileTarget(Name=allfile)
+2021-07-01 11:13:13.3314 Info Adding target FileTarget(Name=ownFile-web)
+2021-07-01 11:13:13.3314 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-07-01 11:13:13.4026 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-07-01 11:13:13.4648 Info Configuration initialized.
+2021-07-01 11:13:13.4648 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-07-01 11:14:52.1341 Info Message Template Auto Format enabled
+2021-07-01 11:14:52.1702 Info Loading assembly: NLog.Web.AspNetCore
+2021-07-01 11:14:52.3524 Info Adding target FileTarget(Name=allfile)
+2021-07-01 11:14:52.3524 Info Adding target FileTarget(Name=ownFile-web)
+2021-07-01 11:14:52.3634 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-07-01 11:14:52.4147 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-07-01 11:14:52.4531 Info Configuration initialized.
+2021-07-01 11:14:52.4531 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-07-01 11:19:35.6803 Info Message Template Auto Format enabled
+2021-07-01 11:19:35.7428 Info Loading assembly: NLog.Web.AspNetCore
+2021-07-01 11:19:35.8784 Info Adding target FileTarget(Name=allfile)
+2021-07-01 11:19:35.8784 Info Adding target FileTarget(Name=ownFile-web)
+2021-07-01 11:19:35.8784 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-07-01 11:19:35.9376 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-07-01 11:19:35.9845 Info Configuration initialized.
+2021-07-01 11:19:35.9845 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-07-02 09:04:36.0308 Info Message Template Auto Format enabled
+2021-07-02 09:04:36.5848 Info Loading assembly: NLog.Web.AspNetCore
+2021-07-02 09:04:36.7785 Info Adding target FileTarget(Name=allfile)
+2021-07-02 09:04:36.7822 Info Adding target FileTarget(Name=ownFile-web)
+2021-07-02 09:04:36.7822 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-07-02 09:04:36.9184 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-07-02 09:04:36.9744 Info Configuration initialized.
+2021-07-02 09:04:36.9744 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
+2021-07-02 09:07:14.2547 Info Message Template Auto Format enabled
+2021-07-02 09:07:14.3371 Info Loading assembly: NLog.Web.AspNetCore
+2021-07-02 09:07:14.4633 Info Adding target FileTarget(Name=allfile)
+2021-07-02 09:07:14.4633 Info Adding target FileTarget(Name=ownFile-web)
+2021-07-02 09:07:14.4691 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-07-02 09:07:14.5450 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=D:\Documents off Disc C\Anderson\Area de trabalho\Meus projetos\PACT\app.Tabaldi.PACT\bin\Debug\netcoreapp3.1\NLog.config
+2021-07-02 09:07:14.5864 Info Configuration initialized.
+2021-07-02 09:07:14.5864 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.8.12686. Product version: 4.7.8+1a738710a3e2974972abafd94d9df40f6b58035f. GlobalAssemblyCache: False
